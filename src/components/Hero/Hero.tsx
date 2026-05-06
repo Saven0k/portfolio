@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next";
 import { profile } from "../../data/profile";
 import "./Hero.scss";
 import image from "./mee.jpg"
+
 const Hero = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language as "ru" | "en";
 
     const scrollToContact = () => {
         const contactSection = document.getElementById("contact");
@@ -24,14 +26,14 @@ const Hero = () => {
         <section id="hero" className="hero">
             <img 
                 src={image}
-                alt={profile.name}
+                alt={profile.name[lang]}
                 className="hero__photo hero__photo--desktop"
             />
 
             <div className="hero__mobile-bg">
                 <img 
                     src={image}
-                    alt={profile.name}
+                    alt={profile.name[lang]}
                     className="hero__photo-bg"
                 />
                 <div className="hero__mobile-overlay"></div>
@@ -53,7 +55,7 @@ const Hero = () => {
                     transition={{ delay: 0.4 }}
                     className="hero__title"
                 >
-                    {profile.name} <br className="hero__br" />{profile.surname}
+                    {profile.name[lang]} <br className="hero__br" />{profile.surname[lang]}
                 </motion.h1>
 
                 <motion.h2
@@ -62,7 +64,7 @@ const Hero = () => {
                     transition={{ delay: 0.6 }}
                     className="hero__role"
                 >
-                    {t("hero.role")}
+                    {profile.position[lang]}
                 </motion.h2>
 
                 <motion.div

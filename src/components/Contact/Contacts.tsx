@@ -100,7 +100,7 @@ const Contact = () => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        <p>© 2026 Роман Савенков | {lang === "ru" ? "Full Stack разработчик" : "Full Stack Developer"}</p>
+        <p>© 2025 {profile.name[lang]} {profile.surname[lang]} | {profile.position[lang]}</p>
       </motion.div>
     </section>
   );

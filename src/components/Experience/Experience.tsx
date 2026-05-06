@@ -31,16 +31,16 @@ const Experience = () => {
           >
             <div className="experience__dot"></div>
             <div className="experience__content">
-              <h3>{exp.company}</h3>
+              <h3>{lang === "ru" ? exp.company : exp.companyEn}</h3>
               <h4>{exp.position[lang]}</h4>
               <span className="experience__period">{exp.period[lang]}</span>
               
               {exp.projects.map((project, pIdx) => (
                 <div key={pIdx} className="experience__project">
-                  <h5>{project.name}</h5>
+                  <h5>{lang === "ru" ? project.name : project.nameEn}</h5>
                   <p>{project.description[lang]}</p>
                   <ul>
-                    {project.achievements.map((achievement, aIdx) => (
+                    {project.achievements[lang].map((achievement, aIdx) => (
                       <li key={aIdx}>{achievement}</li>
                     ))}
                   </ul>
@@ -85,7 +85,6 @@ const Experience = () => {
           ))}
         </div>
       </motion.div>
-
       <motion.div
         className="experience__languages-section"
         initial={{ opacity: 0, y: 30 }}
@@ -97,7 +96,7 @@ const Experience = () => {
           {profile.languages.map((langItem, idx) => (
             <div key={idx} className="language-item">
               <div className="language-info">
-                <span className="language-name">{langItem.name}</span>
+                <span className="language-name">{lang === "ru" ? langItem.name : langItem.nameEn}</span>
                 <span className="language-level">{langItem.level[lang]}</span>
               </div>
               <div className="language-bar">

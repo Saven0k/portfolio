@@ -148,12 +148,10 @@
     align-items: center;
     justify-content: center;
     
-    // Прячем десктопное фото
     &__photo--desktop {
       display: none;
     }
     
-    // Показываем мобильный фон
     &__mobile-bg {
       display: block;
       position: absolute;

@@ -1,6 +1,12 @@
 export const profile = {
-    name: "Роман",
-    surname: "Савенков",
+    name: {
+        ru: "Роман",
+        en: "Roman"
+    },
+    surname: {
+        ru: "Савенков",
+        en: "Savenkov"
+    },
     age: 18,
     location: {
         ru: "Санкт-Петербург, Россия",
@@ -14,7 +20,10 @@ export const profile = {
         ru: "Россия",
         en: "Russia"
     },
-    position: "Full Stack разработчик",
+    position: {
+        ru: "Full Stack разработчик",
+        en: "Full Stack Developer"
+    },
     email: "romasav2017@gmail.com",
     phone: "+79990374113",
     github: "https://github.com/Saven0k",
@@ -95,6 +104,7 @@ export const profile = {
     experience: [
         {
             company: "Хекслет колледж",
+            companyEn: "Hexlet College",
             position: {
                 ru: "Full Stack разработчик",
                 en: "Full Stack Developer"
@@ -106,20 +116,29 @@ export const profile = {
             projects: [
                 {
                     name: "База знаний",
+                    nameEn: "Knowledge Base",
                     description: {
                         ru: "Веб-приложение для колледжа. Участвовал в полном цикле разработки - от проектирования интерфейса до реализации серверной логики.",
                         en: "Web application for college. Participated in the full development cycle - from interface design to server logic implementation."
                     },
-                    achievements: [
-                        "Разрабатывал фронтенд-часть с использованием React, TypeScript, Redux-toolkit",
-                        "Реализовал бекенд-функциональность на Node.js, Express, TypeScript, Prisma",
-                        "Оптимизировал процессы взаимодействия между фронтендом и бекендом"
-                    ]
+                    achievements: {
+                        ru: [
+                            "Разрабатывал фронтенд-часть с использованием React, TypeScript, Redux-toolkit",
+                            "Реализовал бекенд-функциональность на Node.js, Express, TypeScript, Prisma",
+                            "Оптимизировал процессы взаимодействия между фронтендом и бекендом"
+                        ],
+                        en: [
+                            "Developed frontend using React, TypeScript, Redux-toolkit",
+                            "Implemented backend functionality with Node.js, Express, TypeScript, Prisma",
+                            "Optimized frontend-backend interaction processes"
+                        ]
+                    }
                 }
             ]
         },
         {
             company: "Финансовый учет",
+            companyEn: "Finance Tracker",
             position: {
                 ru: "Frontend разработчик",
                 en: "Frontend Developer"
@@ -131,23 +150,41 @@ export const profile = {
             projects: [
                 {
                     name: "Финансовый учет",
+                    nameEn: "Finance Tracker",
                     description: {
                         ru: "Коммерческое веб-приложение для учета финансов",
                         en: "Commercial web application for financial accounting"
                     },
-                    achievements: [
-                        "Принимал активное участие в командной разработке коммерческого веб-приложения",
-                        "Координировал работу команды: распределял задачи, проводил код-ревью",
-                        "Решал нестандартные задачи и отладку сложных технических проблем"
-                    ]
+                    achievements: {
+                        ru: [
+                            "Принимал активное участие в командной разработке коммерческого веб-приложения",
+                            "Координировал работу команды: распределял задачи, проводил код-ревью",
+                            "Решал нестандартные задачи и отладку сложных технических проблем"
+                        ],
+                        en: [
+                            "Actively participated in the team development of a commercial web application",
+                            "Coordinated team work: task distribution, code reviews",
+                            "Solved non-standard tasks and debugged complex technical issues"
+                        ]
+                    }
                 }
             ]
         }
     ],
     
     languages: [
-        { name: "Русский", nameEn: "Russian", level: { ru: "Родной", en: "Native" }, percentage: 100 },
-        { name: "Английский", nameEn: "English", level: { ru: "B2 - Выше среднего", en: "B2 - Upper Intermediate" }, percentage: 65 }
+        { 
+            name: "Русский", 
+            nameEn: "Russian", 
+            level: { ru: "Родной", en: "Native" }, 
+            percentage: 100 
+        },
+        { 
+            name: "Английский", 
+            nameEn: "English", 
+            level: { ru: "B2 - Выше среднего", en: "B2 - Upper Intermediate" }, 
+            percentage: 65 
+        }
     ],
 
     projects: [
