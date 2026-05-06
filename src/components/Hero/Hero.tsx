@@ -1,4 +1,3 @@
-// src/components/Hero/Hero.tsx
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { profile } from "../../data/profile";
@@ -23,14 +22,12 @@ const Hero = () => {
 
     return (
         <section id="hero" className="hero">
-            {/* Фото для десктопа - справа */}
             <img 
-                src={image}п
+                src={image}
                 alt={profile.name}
                 className="hero__photo hero__photo--desktop"
             />
 
-            {/* Фото для мобилки - фон */}
             <div className="hero__mobile-bg">
                 <img 
                     src={image}
@@ -40,7 +37,6 @@ const Hero = () => {
                 <div className="hero__mobile-overlay"></div>
             </div>
 
-            {/* Контент */}
             <div className="hero__content">
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}

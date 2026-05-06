@@ -8,7 +8,6 @@
   gap: 50px;
   background: var(--bg-primary);
 
-  // Фото для десктопа
   &__photo--desktop {
     flex: 1;
     max-width: 420px;
@@ -25,7 +24,6 @@
     }
   }
 
-  // Мобильный фон (скрыт на десктопе)
   &__mobile-bg {
     display: none;
   }
@@ -50,7 +48,6 @@
     );
   }
 
-  // Контент
   &__content {
     flex: 1;
     max-width: 600px;
@@ -126,7 +123,6 @@
   }
 }
 
-// ПЛАНШЕТЫ (до 1024px)
 @media (max-width: 1024px) {
   .hero {
     padding: 0 5%;
@@ -142,7 +138,6 @@
   }
 }
 
-// ТЕЛЕФОНЫ (до 768px) - ПОЛНОСТЬЮ ПЕРЕДЕЛАНО
 @media (max-width: 768px) {
   .hero {
     min-height: 100vh;
@@ -176,7 +171,6 @@
       }
     }
     
-    // Контент по центру поверх фона
     &__content {
       position: relative;
       z-index: 2;
@@ -232,7 +226,6 @@
   }
 }
 
-// МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px)
 @media (max-width: 480px) {
   .hero {
     &__content {
@@ -264,7 +257,6 @@
   }
 }
 
-// СВЕТЛАЯ ТЕМА (адаптив)
 [data-theme="light"] {
   .hero {
     @media (max-width: 768px) {
@@ -289,7 +281,6 @@
   }
 }
 
-// Анимации
 @keyframes fadeInUp {
   from {
     opacity: 0;
