@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Frontend & Full Stack Developer",
+    "view_work": "View Work",
+    "contact_me": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Frontend developer with experience in the full cycle of web application development. Passionate about deep code analysis, performance optimization, and improving team workflows. Strive to create efficient and user-friendly interfaces, as well as participate in backend development."
+  },
+  "skills": {
+    "title": "Technologies & Tools"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "achievements": "Key Achievements",
+    "education": "Education",
+    "languages": "Languages",
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "demo": "Demo",
+    "github": "GitHub"
+  },
+  "contact": {
+    "title": "Contact",
+    "available": "Always open to new opportunities!",
+    "email": "Email",
+    "phone": "Phone",
+    "github": "GitHub",
+    "telegram": "Telegram",
+    "vkontakte": "VKontakte"
+  }
+}

@@ -1,75 +1,108 @@
-# React + TypeScript + Vite
+# 💼 Роман Савенков | Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-5.0-000000?style=for-the-badge)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Современное портфолио-резюме с адаптивным дизайном, тёмной/светлой темой и полной локализацией**
 
-## React Compiler
+[🌐 Демо](https://saven0k.github.io/portfolio) | [📧 Контакты](#контакты) | [📄 Резюме](#)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+</div>
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 📋 О проекте
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Современное веб-портфолио, разработанное с использованием актуальных технологий. Включает полную информацию об опыте работы, образовании, навыках и проектах. Поддерживает русский и английский языки, а также тёмную и светлую темы.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### ✨ Особенности
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Функция | Описание |
+|---------|----------|
+| 🌍 **Двуязычность** | Полная поддержка русского и английского языков |
+| 🌓 **Темы** | Тёмная и светлая тема с сохранением выбора |
+| 📱 **Адаптивность** | Корректное отображение на всех устройствах |
+| 🎨 **Анимации** | Плавные появления и hover-эффекты с Framer Motion |
+| 📊 **Навыки** | Визуальные круговые индикаторы уровня владения |
+| 🎓 **Образование** | Карточки с учебными заведениями и ссылками |
+| 💼 **Опыт** | Таймлайн с ключевыми достижениями |
+| 🚀 **Проекты** | Карточки с технологиями и ссылками на код |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Технологии
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Frontend
+- **React 18** — библиотека для UI
+- **TypeScript** — типизация
+- **Vite** — сборка и разработка
+- **SCSS Modules** — стилизация
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### State Management & Data
+- **Zustand** — управление состоянием (тема, язык)
+- **i18next** — интернационализация
+
+### UI & Animations
+- **Framer Motion** — анимации
+- **CSS Variables** — динамическая смена темы
+
+---
+
+## 📁 Структура проекта
+src/
+├── assets/ # Статические файлы
+├── components/ # React компоненты
+│ ├── About/ # Обо мне
+│ ├── Contact/ # Контакты
+│ ├── Experience/ # Опыт и образование
+│ ├── Header/ # Шапка с навигацией
+│ ├── Hero/ # Главный экран
+│ ├── LanguageToggle/ # Переключатель языка
+│ ├── Projects/ # Проекты
+│ ├── Skills/ # Навыки с индикаторами
+│ └── ThemeToggle/ # Переключатель темы
+├── data/
+│ └── profile.ts # Все данные (тексты, ссылки, проценты)
+├── layouts/
+│ └── MainLayout.tsx # Основной layout
+├── store/
+│ └── useAppStore.ts # Zustand store
+├── styles/
+│ ├── global.scss # Глобальные стили
+│ └── variables.scss # CSS переменные
+├── i18n/
+│ ├── index.ts # Настройка i18n
+│ ├── ru.json # Русские переводы
+│ └── en.json # Английские переводы
+├── App.tsx
+└── main.tsx
+
+## 🚀 Установка и запуск
+
+### Требования
+- Node.js 18+
+- npm / yarn / pnpm
+
+### Команды
+
+```bash
+# Клонирование репозитория
+git clone https://github.com/Saven0k/portfolio.git
+cd portfolio`
+
+# Установка зависимостей
+npm install
+
+# Запуск dev-сервера
+npm run dev
+
+# Сборка продакшн версии
+npm run build
+
+# Предпросмотр собранного проекта
+npm run preview
