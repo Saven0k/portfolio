@@ -29,12 +29,12 @@ export const profile = {
     github: "https://github.com/Saven0k",
     telegram: "@owl11112",
     vkontakte: "https://vk.com/savenok0",
-    
+
     about: {
         ru: "Frontend-разработчик с опытом участия в полном цикле создания веб-приложений. Увлекаюсь глубоким анализом кода, оптимизацией производительности и улучшением рабочих процессов в команде. Стремлюсь создавать эффективные и удобные пользовательские интерфейсы, а также принимать участие в бекенд-разработке.",
         en: "Frontend developer with experience in the full cycle of web application development. Passionate about deep code analysis, performance optimization, and improving team workflows. Strive to create efficient and user-friendly interfaces, as well as participate in backend development."
     },
-    
+
     skills: [
         { name: "React", level: 90 },
         { name: "TypeScript", level: 85 },
@@ -51,7 +51,7 @@ export const profile = {
         { name: "Vite", level: 85 },
         { name: "Git/GitHub", level: 85 }
     ],
-    
+
     education: [
         {
             name: "Хекслет колледж",
@@ -100,7 +100,7 @@ export const profile = {
             }
         }
     ],
-    
+
     experience: [
         {
             company: "Хекслет колледж",
@@ -136,6 +136,7 @@ export const profile = {
                 }
             ]
         },
+
         {
             company: "Финансовый учет",
             companyEn: "Finance Tracker",
@@ -171,19 +172,56 @@ export const profile = {
             ]
         }
     ],
-    
+
+    achievements: {
+        ru: [
+            {
+                title: "Призер регионального этапа чемпионата «Профессионалы»",
+                place: "Санкт-Петербург",
+                competition: "Профессионалы",
+                category: "Веб-технологии",
+                description: "Занял призовое место на региональном этапе всероссийского чемпионата «Профессионалы» в компетенции «Веб-технологии»",
+                details: [
+                    "Разработал SPA приложение с нуля",
+                    "Создал REST API для приложения",
+                    "Развернул проект на WordPress",
+                    "Выполнил верстку адаптивного интерфейса"
+                ],
+                date: "2024",
+                icon: "🏆"
+            }
+        ],
+        en: [
+            {
+                title: "Prize-winner of the regional stage of the 'Professionals' championship",
+                place: "Saint Petersburg",
+                competition: "Professionals",
+                category: "Web Technologies",
+                description: "Took a prize-winning place at the regional stage of the All-Russian championship 'Professionals' in the 'Web Technologies' category",
+                details: [
+                    "Developed an SPA application from scratch",
+                    "Created a REST API for the application",
+                    "Deployed the project on WordPress",
+                    "Implemented responsive interface layout"
+                ],
+                date: "2024",
+                icon: "🏆"
+            }
+        ]
+    },
+
     languages: [
-        { 
-            name: "Русский", 
-            nameEn: "Russian", 
-            level: { ru: "Родной", en: "Native" }, 
-            percentage: 100 
+        {
+            name: "Русский",
+            nameEn: "Russian",
+            level: { ru: "Родной", en: "Native" },
+            percentage: 100
         },
-        { 
-            name: "Английский", 
-            nameEn: "English", 
-            level: { ru: "B2 - Выше среднего", en: "B2 - Upper Intermediate" }, 
-            percentage: 65 
+        {
+            name: "Английский",
+            nameEn: "English",
+            level: { ru: "B2 - Выше среднего", en: "B2 - Upper Intermediate" },
+            percentage: 65
         }
     ],
 

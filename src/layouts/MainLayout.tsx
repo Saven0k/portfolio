@@ -1,4 +1,5 @@
 import About from "../components/About/About";
+import Achievements from "../components/Achievements/Achievements";
 import Contact from "../components/Contact/Contacts";
 import Experience from "../components/Experience/Experience";
 import Header from "../components/Header/Header";
@@ -14,6 +15,7 @@ const MainLayout = () => {
       <About />
       <Skills />
       <Experience />
+      <Achievements />
       <Projects />
       <Contact />
     </>

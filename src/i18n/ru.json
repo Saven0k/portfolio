@@ -52,5 +52,8 @@
             "november": "Ноябрь",
             "december": "Декабрь"
         }
+    },
+    "achievements": {
+        "title": "🏆 Достижения"
     }
 }

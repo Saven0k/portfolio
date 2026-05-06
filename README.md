@@ -57,6 +57,7 @@
 src/
 ├── components/ # React компоненты
 │ ├── About/ # Обо мне
+│ ├── Achievements/ # Достижения
 │ ├── Contact/ # Контакты
 │ ├── Experience/ # Опыт и образование
 │ ├── Header/ # Шапка с навигацией
