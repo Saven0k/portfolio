@@ -97,7 +97,7 @@ export const profile = {
         {
             name: "Хекслет колледж",
             nameEn: "Hexlet College",
-            url: "https://ru.hexlet.io/",
+            url: "https://hexly.ru/",
             degree: {
                 ru: "Информационные системы и программирование",
                 en: "Information Systems and Programming"
