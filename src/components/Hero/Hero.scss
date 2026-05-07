@@ -1,4 +1,3 @@
-// src/components/Hero/Hero.scss
 .hero {
   min-height: 100vh;
   display: flex;
@@ -260,7 +259,6 @@
   }
 }
 
-// СВЕТЛАЯ ТЕМА - убрали блики, текст читаемый
 [data-theme="light"] {
   .hero {
     &__subtitle, 
