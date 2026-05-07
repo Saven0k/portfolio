@@ -55,5 +55,9 @@
     },
     "achievements": {
         "title": "🏆 Достижения"
+    },
+    "softSkills": {
+        "title": "Soft Skills",
+        "subtitle": "Личные качества, которые помогают в работе и жизни"
     }
 }

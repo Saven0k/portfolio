@@ -35,22 +35,63 @@ export const profile = {
         en: "Frontend developer with experience in the full cycle of web application development. Passionate about deep code analysis, performance optimization, and improving team workflows. Strive to create efficient and user-friendly interfaces, as well as participate in backend development."
     },
 
-    skills: [
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "JavaScript", level: 90 },
-        { name: "Python", level: 80 },
-        { name: "Django", level: 75 },
-        { name: "Nest.js", level: 70 },
-        { name: "FastApi", level: 70 },
-        { name: "Node.js", level: 85 },
-        { name: "Express", level: 85 },
-        { name: "Redux/Redux Toolkit", level: 85 },
-        { name: "HTML5/CSS3/SASS", level: 90 },
-        { name: "MySQL/PostgreSQL", level: 80 },
-        { name: "Vite", level: 85 },
-        { name: "Git/GitHub", level: 85 }
-    ],
+    skills: {
+        frontend: [
+            { name: "React", level: 85 },
+            { name: "Next.js", level: 75 },
+            { name: "TypeScript", level: 85 },
+            { name: "JavaScript", level: 95 },
+            { name: "Redux/Redux Toolkit/Zustand", level: 85 },
+            { name: "HTML5/CSS3/SASS", level: 90 },
+            { name: "Tailwind CSS", level: 80 },
+            { name: "Bootstrap/Material UI", level: 90 },
+            { name: "Vite/Webpack", level: 90 },
+            { name: "Framer Motion", level: 85 },
+            { name: "React Query/TanStack Query", level: 75 },
+            { name: "GraphQL/Apollo", level: 70 },
+            { name: "ESLint/Prettier", level: 80 }
+        ],
+        backend: [
+            { name: "Node.js", level: 85 },
+            { name: "Express.js", level: 95 },
+            { name: "Nest.js", level: 75 },
+            { name: "Python", level: 80 },
+            { name: "Django/DRF", level: 75 },
+            { name: "FastAPI", level: 70 },
+            { name: "PostgreSQL", level: 80 },
+            { name: "MySQL", level: 80 },
+            { name: "MongoDB", level: 70 },
+            { name: "Prisma/TypeORM", level: 85 },
+            { name: "Docker", level: 75 },
+            { name: "Redis", level: 70 },
+            { name: "REST API", level: 95 },
+            { name: "JWT/OAuth", level: 85 },
+            { name: "Git/GitHub/GitLab", level: 90 }
+        ]
+    },
+
+    softSkills: {
+        ru: [
+            { name: "Стрессоустойчивость", level: 90, icon: "🧘", description: "Способен работать в условиях жестких дедлайнов и многозадачности" },
+            { name: "Командная работа", level: 85, icon: "🤝", description: "Эффективно взаимодействую с коллегами, легко нахожу общий язык" },
+            { name: "Критическое мышление", level: 85, icon: "💭", description: "Анализирую проблемы с разных сторон, нахожу оптимальные решения" },
+            { name: "Коммуникабельность", level: 90, icon: "💬", description: "Четко излагаю мысли, умею слушать и слышать" },
+            { name: "Обучаемость", level: 95, icon: "📚", description: "Быстро осваиваю новые технологии и инструменты" },
+            { name: "Ответственность", level: 95, icon: "✅", description: "Довожу задачи до конца, соблюдаю дедлайны" },
+            { name: "Тайм-менеджмент", level: 85, icon: "⏰", description: "Эффективно планирую рабочее время" },
+            { name: "Внимательность к деталям", level: 90, icon: "🔍", description: "Замечаю нюансы, пишу чистый код" }
+        ],
+        en: [
+            { name: "Stress Resistance", level: 90, icon: "🧘", description: "Able to work under tight deadlines and multitasking" },
+            { name: "Teamwork", level: 85, icon: "🤝", description: "Effectively collaborate with colleagues, easy to communicate" },
+            { name: "Critical Thinking", level: 85, icon: "💭", description: "Analyze problems from different angles, find optimal solutions" },
+            { name: "Communication", level: 90, icon: "💬", description: "Clearly express thoughts, able to listen and hear" },
+            { name: "Quick Learning", level: 95, icon: "📚", description: "Quickly master new technologies and tools" },
+            { name: "Responsibility", level: 95, icon: "✅", description: "Complete tasks on time, meet deadlines" },
+            { name: "Time Management", level: 85, icon: "⏰", description: "Effectively plan working time" },
+            { name: "Attention to Detail", level: 90, icon: "🔍", description: "Notice nuances, write clean code" }
+        ]
+    },
 
     education: [
         {
@@ -227,7 +268,10 @@ export const profile = {
 
     projects: [
         {
-            name: "Knowledge Base",
+            name: {
+                ru: "База знаний",
+                en: "Knowledge Base"
+            },
             description: {
                 ru: "Веб-приложение для колледжа с полным циклом разработки",
                 en: "Web application for college with full development cycle"
@@ -236,10 +280,16 @@ export const profile = {
             github: "https://github.com/Saven0k/knowledge-base",
             stack: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
             image: "knowledge-base",
-            features: ["JWT аутентификация", "Ролевая система", "Real-time обновления"]
+            features: {
+                ru: ["JWT аутентификация", "Ролевая система", "Real-time обновления"],
+                en: ["JWT authentication", "Role system", "Real-time updates"]
+            }
         },
         {
-            name: "Finance Tracker",
+            name: {
+                ru: "Финансовый трекер",
+                en: "Finance Tracker"
+            },
             description: {
                 ru: "Приложение для учета личных финансов с аналитикой",
                 en: "Personal finance tracking app with analytics"
@@ -248,7 +298,10 @@ export const profile = {
             github: "https://github.com/Saven0k/finance-tracker",
             stack: ["React", "Redux Toolkit", "Node.js", "Express", "PostgreSQL"],
             image: "finance-tracker",
-            features: ["Графики и статистика", "Экспорт данных", "Категории расходов"]
+            features: {
+                ru: ["Графики и статистика", "Экспорт данных", "Категории расходов"],
+                en: ["Charts and statistics", "Data export", "Expense categories"]
+            }
         }
     ]
 };

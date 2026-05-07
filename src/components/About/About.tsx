@@ -60,7 +60,7 @@ const About = () => {
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <span className="stat-number">20+</span>
+            <span className="stat-number">10+</span>
             <span className="stat-label">{lang === "ru" ? "проектов" : "projects"}</span>
           </motion.div>
           
@@ -69,8 +69,8 @@ const About = () => {
             whileHover={{ scale: 1.05, y: -5 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <span className="stat-number">1+</span>
-            <span className="stat-label">{lang === "ru" ? "год опыта" : "year exp"}</span>
+            <span className="stat-number">2+</span>
+            <span className="stat-label">{lang === "ru" ? "года опыта" : "year exp"}</span>
           </motion.div>
         </div>
 

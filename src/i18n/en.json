@@ -55,5 +55,9 @@
   },
   "achievements": {
     "title": "🏆 Achievements"
+  },
+  "softSkills": {
+    "title": "Soft Skills",
+    "subtitle": "Personal qualities that help in work and life"
   }
 }

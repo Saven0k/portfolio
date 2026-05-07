@@ -20,7 +20,7 @@ const Projects = () => {
       <div className="projects__grid">
         {profile.projects.map((project, i) => (
           <motion.div
-            key={project.name}
+            key={project.name[lang]}
             className="project"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,14 +30,14 @@ const Projects = () => {
             <div className="project__image">
               <div className="project__overlay">
                 <div className="project__features">
-                  {project.features?.map((feature, idx) => (
+                  {project.features[lang].map((feature, idx) => (
                     <span key={idx}>✨ {feature}</span>
                   ))}
                 </div>
               </div>
             </div>
 
-            <h3>{project.name}</h3>
+            <h3>{project.name[lang]}</h3>
             <p>{project.description[lang]}</p>
 
             <div className="project__stack">
