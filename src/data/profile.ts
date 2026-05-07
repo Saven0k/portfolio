@@ -302,6 +302,38 @@ export const profile = {
                 ru: ["Графики и статистика", "Экспорт данных", "Категории расходов"],
                 en: ["Charts and statistics", "Data export", "Expense categories"]
             }
+        },
+        {
+            name: {
+                ru: "Портфолио-сайт",
+                en: "Portfolio Website"
+            },
+            description: {
+                ru: "Современное портфолио-резюме с адаптивным дизайном, тёмной/светлой темой и полной локализацией. Включает визуализацию навыков, опыт работы, достижения и контакты.",
+                en: "Modern portfolio-resume with responsive design, dark/light theme and full localization. Includes skills visualization, work experience, achievements and contacts."
+            },
+            link: "https://saven0k.github.io/portfolio",
+            github: "https://github.com/Saven0k/portfolio",
+            stack: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
+            image: "portfolio",
+            features: {
+                ru: [
+                    "🌍 Двуязычность (RU/EN)",
+                    "🌓 Тёмная/светлая тема",
+                    "📱 Полностью адаптивный дизайн",
+                    "🎨 Плавные анимации и ховер-эффекты",
+                    "📊 Визуализация навыков с процентами",
+                    "🏆 Секция достижений и софт-скиллов"
+                ],
+                en: [
+                    "🌍 Bilingual (RU/EN)",
+                    "🌓 Dark/light theme",
+                    "📱 Fully responsive design",
+                    "🎨 Smooth animations and hover effects",
+                    "📊 Skill visualization with percentages",
+                    "🏆 Achievements and soft skills section"
+                ]
+            }
         }
     ]
 };
