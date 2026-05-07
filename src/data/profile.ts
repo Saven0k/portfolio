@@ -321,17 +321,11 @@ export const profile = {
                     "🌍 Двуязычность (RU/EN)",
                     "🌓 Тёмная/светлая тема",
                     "📱 Полностью адаптивный дизайн",
-                    "🎨 Плавные анимации и ховер-эффекты",
-                    "📊 Визуализация навыков с процентами",
-                    "🏆 Секция достижений и софт-скиллов"
                 ],
                 en: [
                     "🌍 Bilingual (RU/EN)",
                     "🌓 Dark/light theme",
                     "📱 Fully responsive design",
-                    "🎨 Smooth animations and hover effects",
-                    "📊 Skill visualization with percentages",
-                    "🏆 Achievements and soft skills section"
                 ]
             }
         }

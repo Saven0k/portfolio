@@ -1,3 +1,4 @@
+// src/components/Header/Header.scss
 .header {
   position: fixed;
   top: 0;
@@ -127,7 +128,7 @@
     span {
       width: 25px;
       height: 2px;
-      background: var(--text);
+      background: #ffffff; // Белый по умолчанию (для темной темы)
       transition: all 0.3s ease;
       border-radius: 2px;
     }
@@ -237,29 +238,45 @@
       display: flex;
     }
   }
+}
+
+// СВЕТЛАЯ ТЕМА ДЛЯ ХЕДЕРА
+[data-theme="light"] {
+  .header--scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(124, 92, 255, 0.2);
+  }
   
-  [data-theme="light"] {
+  .header__burger {
+    background: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.15);
+    
+    span {
+      background: #1a1a1a; // Темный цвет для светлой темы
+    }
+    
+    &:hover {
+      background: rgba(124, 92, 255, 0.15);
+    }
+  }
+  
+  .header__nav {
+    button {
+      color: #1a1a1a;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .header__nav {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(30px);
-      border-left: 1px solid rgba(124, 92, 255, 0.3);
+      border-left: 1px solid rgba(124, 92, 255, 0.2);
       
       button {
         color: #1a1a1a;
       }
     }
-  }
-}
-
-[data-theme="light"] {
-  .header--scrolled {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(124, 92, 255, 0.3);
-  }
-  
-  .header__burger {
-    background: rgba(124, 92, 255, 0.1);
   }
 }
 

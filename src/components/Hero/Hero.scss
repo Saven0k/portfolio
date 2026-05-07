@@ -1,3 +1,4 @@
+// src/components/Hero/Hero.scss
 .hero {
   min-height: 100vh;
   display: flex;
@@ -42,9 +43,9 @@
     bottom: 0;
     background: linear-gradient(
       135deg,
-      rgba(10, 10, 10, 0.85) 0%,
-      rgba(124, 92, 255, 0.3) 50%,
-      rgba(10, 10, 10, 0.85) 100%
+      rgba(10, 10, 10, 0.8) 0%,
+      rgba(124, 92, 255, 0.2) 50%,
+      rgba(10, 10, 10, 0.8) 100%
     );
   }
 
@@ -71,13 +72,15 @@
 
   &__subtitle {
     font-size: 18px;
-    opacity: 0.8;
+    color: var(--text-primary);
+    opacity: 0.85;
     margin-bottom: 10px;
   }
 
   &__role {
     margin-top: 15px;
     font-size: clamp(18px, 4vw, 24px);
+    color: var(--text-primary);
     opacity: 0.9;
   }
 
@@ -145,7 +148,7 @@
     margin: 0;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     
     &__photo--desktop {
@@ -165,7 +168,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(0.7);
+        filter: brightness(0.6);
       }
     }
     
@@ -173,18 +176,18 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      padding: 20px;
+      padding: 30px 25px;
       width: 100%;
       max-width: 100%;
-      backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 40px;
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 30px;
       margin: 20px;
     }
     
     &__title {
       font-size: 42px;
-      background: linear-gradient(135deg, #ffffff, #7c5cff, #00c6ff);
+      background: linear-gradient(135deg, #7c5cff, #00c6ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -192,22 +195,24 @@
     
     &__subtitle {
       font-size: 20px;
-      color: white;
-      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      text-shadow: none;
+      opacity: 1;
     }
     
     &__role {
-      font-size: 20px;
+      font-size: 18px;
       color: rgba(255, 255, 255, 0.95);
-      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+      text-shadow: none;
+      opacity: 1;
     }
     
     &__buttons {
       justify-content: center;
       
       button {
-        padding: 14px 28px;
-        font-size: 16px;
+        padding: 12px 24px;
+        font-size: 15px;
       }
       
       &-secondary {
@@ -217,7 +222,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         
         &:hover {
-          background: rgba(124, 92, 255, 0.3);
+          background: rgba(124, 92, 255, 0.4);
         }
       }
     }
@@ -228,12 +233,12 @@
   .hero {
     &__content {
       margin: 15px;
-      padding: 15px;
+      padding: 20px;
       backdrop-filter: blur(12px);
     }
     
     &__title {
-      font-size: 36px;
+      font-size: 32px;
     }
     
     &__subtitle {
@@ -241,39 +246,63 @@
     }
     
     &__role {
-      font-size: 16px;
+      font-size: 15px;
     }
     
     &__buttons {
       gap: 12px;
       
       button {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 10px 18px;
+        font-size: 13px;
       }
     }
   }
 }
 
+// СВЕТЛАЯ ТЕМА - убрали блики, текст читаемый
 [data-theme="light"] {
   .hero {
+    &__subtitle, 
+    &__role {
+      color: #1a1a1a;
+      opacity: 0.85;
+    }
+    
+    &__title {
+      background: linear-gradient(135deg, #7c5cff, #00c6ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
     @media (max-width: 768px) {
       &__content {
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(8px);
-        
-        &__subtitle, &__role {
-          color: #1a1a1a;
-        }
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(12px);
+      }
+      
+      &__subtitle,
+      &__role {
+        color: #1a1a1a;
       }
       
       &__mobile-overlay {
         background: linear-gradient(
           135deg,
-          rgba(245, 245, 247, 0.85) 0%,
-          rgba(124, 92, 255, 0.2) 50%,
-          rgba(245, 245, 247, 0.85) 100%
+          rgba(255, 255, 255, 0.7) 0%,
+          rgba(124, 92, 255, 0.15) 50%,
+          rgba(255, 255, 255, 0.7) 100%
         );
+      }
+      
+      &__buttons-secondary {
+        color: #1a1a1a;
+        border-color: #7c5cff;
+        
+        &:hover {
+          background: rgba(124, 92, 255, 0.15);
+        }
       }
     }
   }
