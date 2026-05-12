@@ -1,12 +1,9 @@
 import About from "../components/About/About";
-import Achievements from "../components/Achievements/Achievements";
-import Contact from "../components/Contact/Contacts";
 import Experience from "../components/Experience/Experience";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
-import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
-import SoftSkills from "../components/SoftSkills/SoftSkills";
 
 const MainLayout = () => {
   return (
@@ -15,11 +12,8 @@ const MainLayout = () => {
       <Hero />
       <About />
       <Skills />
-      <SoftSkills />
       <Experience />
-      <Achievements />
-      <Projects />
-      <Contact />
+      <Footer />
     </>
   );
 };

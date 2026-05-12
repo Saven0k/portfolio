@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2  {
+  text-align: start !important;
+}
+
 :root {
   --bg-primary: #0a0a0a;
   --bg-secondary: #14141e;

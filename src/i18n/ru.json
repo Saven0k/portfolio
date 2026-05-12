@@ -3,6 +3,7 @@
         "about": "Обо мне",
         "skills": "Навыки",
         "experience": "Опыт",
+        "achievements": "Достижения",
         "projects": "Проекты",
         "contact": "Контакты"
     },
@@ -34,7 +35,7 @@
         "vkontakte": "ВКонтакте"
     },
     "experience": {
-        "title": "Опыт работы",
+        "title": "Опыт и достижения",
         "achievements": "Ключевые достижения",
         "education": "Образование",
         "languages": "Языки",

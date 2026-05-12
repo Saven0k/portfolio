@@ -7,13 +7,32 @@ import "./Header.scss";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
   const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      const sections = ["hero", "about", "skills", "experience", "achievements", "projects", "contact"];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,7 +52,7 @@ const Header = () => {
           <span className="logo-dot">.</span>
         </div>
 
-        <button 
+        <button
           className={`header__burger ${mobileMenuOpen ? "header__burger--active" : ""}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -43,11 +62,36 @@ const Header = () => {
         </button>
 
         <nav className={`header__nav ${mobileMenuOpen ? "header__nav--open" : ""}`}>
-          <button onClick={() => scrollToSection("about")}>{t("nav.about")}</button>
-          <button onClick={() => scrollToSection("skills")}>{t("nav.skills")}</button>
-          <button onClick={() => scrollToSection("experience")}>{t("nav.experience")}</button>
-          <button onClick={() => scrollToSection("projects")}>{t("nav.projects")}</button>
-          <button onClick={() => scrollToSection("contact")}>{t("nav.contact")}</button>
+          <button
+            onClick={() => scrollToSection("about")}
+            className={activeSection === "about" ? "active" : ""}
+          >
+            {t("nav.about")}
+          </button>
+          <button
+            onClick={() => scrollToSection("skills")}
+            className={activeSection === "skills" ? "active" : ""}
+          >
+            {t("nav.skills")}
+          </button>
+          <button
+            onClick={() => scrollToSection("experience")}
+            className={activeSection === "experience" ? "active" : ""}
+          >
+            {t("nav.experience")}
+          </button>
+          <button
+            onClick={() => scrollToSection("achievements")}
+            className={activeSection === "achievements" ? "active" : ""}
+          >
+            {t("nav.achievements")}
+          </button>
+          <button
+            onClick={() => scrollToSection("contact")}
+            className={activeSection === "contact" ? "active" : ""}
+          >
+            {t("nav.contact")}
+          </button>
         </nav>
 
         <div className="header__controls">

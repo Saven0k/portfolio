@@ -3,6 +3,7 @@
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
+    "achievements": "Achievements",
     "projects": "Projects",
     "contact": "Contact"
   },
@@ -20,7 +21,7 @@
     "title": "Technologies & Tools"
   },
   "experience": {
-    "title": "Work Experience",
+    "title": "Experience & Achievements",
     "achievements": "Key Achievements",
     "education": "Education",
     "languages": "Languages",
