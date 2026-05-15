@@ -8,17 +8,10 @@ const Hero = () => {
     const { t, i18n } = useTranslation();
     const lang = i18n.language as "ru" | "en";
 
-    const scrollToContact = () => {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
-    const scrollToProjects = () => {
-        const projectsSection = document.getElementById("projects");
-        if (projectsSection) {
-            projectsSection.scrollIntoView({ behavior: "smooth" });
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     };
 
@@ -73,10 +66,18 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8 }}
                 >
-                    <button onClick={scrollToProjects} className="hero__btn-primary">
+                    <button 
+                        onClick={() => scrollToSection("projects")} 
+                        className="hero__btn-primary"
+                        type="button"
+                    >
                         {t("hero.view_work")}
                     </button>
-                    <button onClick={scrollToContact} className="hero__btn-secondary">
+                    <button 
+                        onClick={() => scrollToSection("contact-form")} 
+                        className="hero__btn-secondary"
+                        type="button"
+                    >
                         {t("hero.contact_me")}
                     </button>
                 </motion.div>

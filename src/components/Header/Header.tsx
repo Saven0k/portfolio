@@ -39,7 +39,7 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
       setMobileMenuOpen(false);
     }
   };
@@ -85,6 +85,12 @@ const Header = () => {
             className={activeSection === "achievements" ? "active" : ""}
           >
             {t("nav.achievements")}
+          </button>
+          <button
+            onClick={() => scrollToSection("projects")}
+            className={activeSection === "projects" ? "active" : ""}
+          >
+            {t("nav.projects")}
           </button>
           <button
             onClick={() => scrollToSection("contact")}
