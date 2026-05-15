@@ -9,7 +9,7 @@ const ContactForm = () => {
     const lang = i18n.language as "ru" | "en";
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-    const FORMSPREE_KEY = "mwvygvev"; 
+    const FORMSPREE_KEY = "xzdondew"; 
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
