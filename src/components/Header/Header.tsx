@@ -81,19 +81,7 @@ const Header = () => {
             {t("nav.experience")}
           </button>
           <button
-            onClick={() => scrollToSection("achievements")}
-            className={activeSection === "achievements" ? "active" : ""}
-          >
-            {t("nav.achievements")}
-          </button>
-          <button
-            onClick={() => scrollToSection("projects")}
-            className={activeSection === "projects" ? "active" : ""}
-          >
-            {t("nav.projects")}
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("contact-form")}
             className={activeSection === "contact" ? "active" : ""}
           >
             {t("nav.contact")}

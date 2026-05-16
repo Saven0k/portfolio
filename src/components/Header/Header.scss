@@ -71,6 +71,13 @@
     }
   }
 
+  /* ПРЯЧЕМ ЛОГОТИП НА МАЛЕНЬКИХ ЭКРАНАХ */
+  @media (max-width: 428px) {
+    &__logo {
+      display: none;
+    }
+  }
+
   @keyframes pulse {
 
     0%,
@@ -135,6 +142,11 @@
       gap: 25px;
     }
 
+    /* НА МАЛЕНЬКИХ ЭКРАНАХ УМЕНЬШАЕМ ОТСТУПЫ */
+    @media (max-width: 500px) {
+      gap: 15px;
+    }
+
     button {
       position: relative;
       background: none;
@@ -146,6 +158,11 @@
       transition: color 0.3s ease;
       padding: 8px 0;
       opacity: 0.85;
+
+      /* УМЕНЬШАЕМ ШРИФТ НА МАЛЕНЬКИХ ЭКРАНАХ */
+      @media (max-width: 500px) {
+        font-size: 14px;
+      }
 
       &::before {
         content: '';
@@ -181,6 +198,11 @@
     gap: 12px;
     position: relative;
     z-index: 2;
+
+    /* УМЕНЬШАЕМ ОТСТУПЫ НА МАЛЕНЬКИХ ЭКРАНАХ */
+    @media (max-width: 500px) {
+      gap: 8px;
+    }
   }
 }
 
@@ -225,6 +247,7 @@
   }
 }
 
+/* СВЕТЛАЯ ТЕМА */
 [data-theme="light"] {
   .header--scrolled {
     background: rgba(255, 255, 255, 0.95);
@@ -244,7 +267,7 @@
     }
   }
 
-  руфвук .header__nav button {
+  .header__nav button {
     color: #1a1a1a;
   }
 

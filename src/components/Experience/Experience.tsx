@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { profile } from "../../data/profile";
 import LinkIcon from "./LinkIcon";
@@ -11,8 +11,40 @@ const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [selectedItem, setSelectedItem] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const timeline = profile.unifiedTimeline[lang];
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1000);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setModalOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile && modalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobile, modalOpen]);
 
   const getTypeLabel = (type: string) => {
     switch (type) {
@@ -28,6 +60,65 @@ const Experience = () => {
       window.open(timeline[selectedItem].link, "_blank");
     }
   };
+
+  const handleItemClick = (idx: number) => {
+    setSelectedItem(idx);
+    if (isMobile) {
+      setModalOpen(true);
+    }
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const renderDetails = (item: typeof timeline[0]) => (
+    <>
+      <div className="details-header">
+        <div className="details-badge" data-type={item.type}>
+          {getTypeLabel(item.type)}
+        </div>
+        <div className="details-title-row">
+          <h3>{item.title}</h3>
+          <div className="details-link-icon" onClick={(e) => {
+            e.stopPropagation();
+            if (item.link) window.open(item.link, "_blank");
+          }}>
+            <LinkIcon />
+          </div>
+        </div>
+        <h4>{item.subtitle}</h4>
+        <span className="details-date">{item.date}</span>
+      </div>
+
+      <div className="details-description">
+        <p>{item.description}</p>
+      </div>
+
+      <div className="details-list">
+        <h4>{lang === "ru" ? "Ключевые моменты:" : "Key points:"}</h4>
+        <ul>
+          {item.details.map((detail: string, idx: number) => (
+            <li key={idx}>
+              <span className="list-icon">▹</span>
+              {detail}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {item.technologies && (
+        <div className="details-tech">
+          <h4>{lang === "ru" ? "Технологии:" : "Technologies:"}</h4>
+          <div className="tech-tags">
+            {item.technologies.map((tech: string, idx: number) => (
+              <span key={idx} className="tech-tag">{tech}</span>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
 
   return (
     <section id="experience" className="experience" ref={ref}>
@@ -45,11 +136,11 @@ const Experience = () => {
           {timeline.map((item, idx) => (
             <motion.div
               key={idx}
-              className={`timeline-item ${selectedItem === idx ? "active" : ""}`}
+              className={`timeline-item ${selectedItem === idx && !isMobile ? "active" : ""}`}
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: idx * 0.1, duration: 0.5 }}
-              onClick={() => setSelectedItem(idx)}
+              onClick={() => handleItemClick(idx)}
             >
               <div className="timeline-dot"></div>
               <div className="timeline-content">
@@ -64,56 +155,40 @@ const Experience = () => {
           ))}
         </div>
 
-        <motion.div
-          className="experience__details"
-          key={selectedItem}
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-          onClick={handleDetailsClick}
-        >
-          <div className="details-header">
-            <div className="details-badge" data-type={timeline[selectedItem].type}>
-              {getTypeLabel(timeline[selectedItem].type)}
-            </div>
-            <div className="details-title-row">
-              <h3>{timeline[selectedItem].title}</h3>
-              <div className="details-link-icon">
-                <LinkIcon />
-              </div>
-            </div>
-            <h4>{timeline[selectedItem].subtitle}</h4>
-            <span className="details-date">{timeline[selectedItem].date}</span>
-          </div>
-
-          <div className="details-description">
-            <p>{timeline[selectedItem].description}</p>
-          </div>
-
-          <div className="details-list">
-            <h4>{lang === "ru" ? "Ключевые моменты:" : "Key points:"}</h4>
-            <ul>
-              {timeline[selectedItem].details.map((detail, idx) => (
-                <li key={idx}>
-                  <span className="list-icon">▹</span>
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {timeline[selectedItem].technologies && (
-            <div className="details-tech">
-              <h4>{lang === "ru" ? "Технологии:" : "Technologies:"}</h4>
-              <div className="tech-tags">
-                {timeline[selectedItem].technologies.map((tech, idx) => (
-                  <span key={idx} className="tech-tag">{tech}</span>
-                ))}
-              </div>
-            </div>
-          )}
-        </motion.div>
+        {/* Десктопная версия - правая панель */}
+        {!isMobile && (
+          <motion.div
+            className="experience__details"
+            key={selectedItem}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4 }}
+            onClick={handleDetailsClick}
+          >
+            {renderDetails(timeline[selectedItem])}
+          </motion.div>
+        )}
       </div>
+
+      {/* Мобильная версия - модальное окно */}
+      {isMobile && modalOpen && (
+        <div className="experience__modal-overlay" onClick={closeModal}>
+          <motion.div
+            className="experience__modal"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="experience__modal-close" onClick={closeModal}>
+              ✕
+            </button>
+            <div className="experience__modal-content">
+              {renderDetails(timeline[selectedItem])}
+            </div>
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 };

@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,9 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2  {
-  text-align: start !important;
-}
 
 :root {
   --bg-primary: #0a0a0a;
@@ -67,7 +74,7 @@ h1, h2  {
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
-  
+
   .skill-circle-progress {
     transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
     will-change: stroke-dashoffset;
