@@ -120,6 +120,8 @@ const Experience = () => {
     </>
   );
 
+  console.log(timeline)
+
   return (
     <section id="experience" className="experience" ref={ref}>
       <motion.h2
