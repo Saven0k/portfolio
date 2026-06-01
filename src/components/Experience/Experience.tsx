@@ -119,9 +119,6 @@ const Experience = () => {
       )}
     </>
   );
-
-  console.log(timeline)
-
   return (
     <section id="experience" className="experience" ref={ref}>
       <motion.h2
@@ -156,8 +153,6 @@ const Experience = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Десктопная версия - правая панель */}
         {!isMobile && (
           <motion.div
             className="experience__details"
@@ -171,8 +166,6 @@ const Experience = () => {
           </motion.div>
         )}
       </div>
-
-      {/* Мобильная версия - модальное окно */}
       {isMobile && modalOpen && (
         <div className="experience__modal-overlay" onClick={closeModal}>
           <motion.div

@@ -181,7 +181,8 @@ export const profile = {
                 ],
                 technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
                 link: "https://github.com/Saven0k/portfolio"
-            }, {
+            }, 
+            {
                 type: "achievement",
                 title: "Призер чемпионата «Профессионалы»",
                 subtitle: "Веб-технологии",
@@ -194,8 +195,41 @@ export const profile = {
                     "Выполнил верстку адаптивного интерфейса"
                 ],
                 technologies: ["SPA", "REST API", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://github.com/Saven0k/professionals-challenge"
-            }
+                link: "https://profi.copp78.ru/2025"
+            },
+            {
+                type: "project",
+                title: "AstroDiary — Астрологический дневник",
+                subtitle: "Дипломный проект",
+                date: "2025",
+                description: "Веб-приложение для ведения астрологического дневника и самоанализа",
+                details: [
+                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
+                    "Разработал фронтенд на React с TypeScript и клиентской маршрутизацией",
+                    "Создал бэкенд на FastAPI с JWT-аутентификацией и CRUD операциями",
+                    "Реализовал систему астрологических прогнозов (симуляция положения планет)",
+                    "Разработал базу данных PostgreSQL с отношением один-ко-многим",
+                    "Интегрировал Framer Motion для плавных анимаций интерфейса"
+                ],
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
+                link: "https://github.com/Saven0k/AstroDiary"
+            },
+            {
+                type: "project",
+                title: "CarMatch — Умный подбор автомобиля",
+                subtitle: "Дипломный проект",
+                date: "2026",
+                description: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя",
+                details: [
+                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
+                    "Разработал фронтенд на React с TypeScript, адаптивным дизайном и анимациями Framer Motion",
+                    "Создал бэкенд на FastAPI с JWT-аутентификацией, хэшированием паролей (bcrypt) и CRUD операциями",
+                    "Реализовал умную логику подбора автомобиля на основе 5 пользовательских ответов (возраст, цвет, напиток, ритм жизни, стиль одежды)",
+                    "Спроектировал и оптимизировал базу данных PostgreSQL с индексами для высокой производительности"
+                ],
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
+                link: "https://github.com/Saven0k/CarMatch"
+            },
         ],
         en: [
             {
@@ -255,8 +289,42 @@ export const profile = {
                     "Implemented responsive interface layout"
                 ],
                 technologies: ["SPA", "REST API", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://github.com/Saven0k/professionals-challenge"
+                link: "https://profi.copp78.ru/2025"
+            }, 
+            {
+                type: "project",
+                title: "AstroDiary — Astrological Diary",
+                subtitle: "Graduation Project",
+                date: "2025",
+                description: "Web application for astrological diary keeping and self-reflection",
+                details: [
+                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
+                    "Developed React frontend with TypeScript and client-side routing",
+                    "Created FastAPI backend with JWT authentication and CRUD operations",
+                    "Implemented astrological forecast system (planetary positions simulation)",
+                    "Designed PostgreSQL database with one-to-many relationships",
+                    "Integrated Framer Motion for smooth UI animations"
+                ],
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
+                link: "https://github.com/Saven0k/AstroDiary"
+            },
+            {
+                type: "project",
+                title: "CarMatch — Smart Car Matching",
+                subtitle: "Graduation Project",
+                date: "2026",
+                description: "Web application for car matching based on user's psycho-geometric profile",
+                details: [
+                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
+                    "Developed React frontend with TypeScript, responsive design, and Framer Motion animations",
+                    "Created FastAPI backend with JWT authentication, password hashing (bcrypt), and CRUD operations",
+                    "Implemented smart car matching logic based on 5 user answers (age, color, drink, lifestyle, clothing style)",
+                    "Designed and optimized PostgreSQL database with indexes for high performance"
+                ],
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
+                link: "https://github.com/Saven0k/CarMatch"
             }
+
         ]
     },
 
@@ -337,69 +405,70 @@ export const profile = {
                     "📱 Fully responsive design",
                 ]
             }
-        }, {
-            name: {
-                ru: "CarMatch — Умный подбор автомобиля",
-                en: "CarMatch — Smart Car Matching"
-            },
-            description: {
-                ru: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя. Анализирует ответы на 5 простых вопросов и рекомендует идеальную марку авто с эмодзи и обоснованием выбора.",
-                en: "Web application for car matching based on user's psycho-geometric profile. Analyzes answers to 5 simple questions and recommends the perfect car brand with emoji and reasoning."
-            },
-            link: "https://github.com/Saven0k/CarMatch",
-            github: "https://github.com/Saven0k/CarMatch",
-            stack: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Framer Motion"],
-            image: "carmatch",
-            features: {
-                ru: [
-                    "🔐 Авторизация и регистрация с JWT токенами",
-                    "🎨 5 вопросов для подбора автомобиля",
-                    "🤖 Умная логика подбора с эмодзи",
-                    "📜 История всех подборов с возможностью удаления",
-                ],
-                en: [
-                    "🔐 JWT-based authentication and registration",
-                    "🎨 5 questions for car matching",
-                    "🤖 Smart matching logic with emojis",
-                    "📜 Full match history with delete option",
-                ]
-            }
         },
-        {
-            "name": {
-                "ru": "AstroDiary — Астрологический дневник",
-                "en": "AstroDiary — Astrological Diary"
-            },
-            "description": {
-                "ru": "Веб-приложение для ведения астрологического дневника и самоанализа. Пользователь может регистрироваться, получать астрологический прогноз (симуляция положения планет) и вести личный дневник, где каждая запись автоматически привязывается к текущим позициям планет.",
-                "en": "Web application for astrological diary keeping and self-reflection. User can register, receive an astrological forecast (simulation of planetary positions), and keep a personal diary where each entry is automatically linked to current planetary positions."
-            },
-            "link": "https://github.com/Saven0k/AstroDiary",
-            "github": "https://github.com/Saven0k/AstroDiary",
-            "stack": [
-                "React",
-                "TypeScript",
-                "FastAPI",
-                "Python",
-                "PostgreSQL",
-                "SQLAlchemy",
-                "JWT",
-                "Vite",
-                "Axios"
-            ],
-            "image": "astrodiary",
-            "features": {
-                "ru": [
-                    "🔐 Регистрация и авторизация с JWT токенами",
-                    "📊 Личный кабинет с данными пользователя (имя, дата и место рождения)",
-                    "🔮 Астрологический прогноз на основе даты рождения (симуляция)"
-                ],
-                "en": [
-                    "🔐 JWT-based registration and authentication",
-                    "📊 Personal dashboard with user data (name, birth date and place)",
-                    "🔮 Astrological forecast based on birth date (simulation)"
-                ]
-            }
-        }
+        // {
+        //     name: {
+        //         ru: "CarMatch — Умный подбор автомобиля",
+        //         en: "CarMatch — Smart Car Matching"
+        //     },
+        //     description: {
+        //         ru: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя. Анализирует ответы на 5 простых вопросов и рекомендует идеальную марку авто с эмодзи и обоснованием выбора.",
+        //         en: "Web application for car matching based on user's psycho-geometric profile. Analyzes answers to 5 simple questions and recommends the perfect car brand with emoji and reasoning."
+        //     },
+        //     link: "https://github.com/Saven0k/CarMatch",
+        //     github: "https://github.com/Saven0k/CarMatch",
+        //     stack: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Framer Motion"],
+        //     image: "carmatch",
+        //     features: {
+        //         ru: [
+        //             "🔐 Авторизация и регистрация с JWT токенами",
+        //             "🎨 5 вопросов для подбора автомобиля",
+        //             "🤖 Умная логика подбора с эмодзи",
+        //             "📜 История всех подборов с возможностью удаления",
+        //         ],
+        //         en: [
+        //             "🔐 JWT-based authentication and registration",
+        //             "🎨 5 questions for car matching",
+        //             "🤖 Smart matching logic with emojis",
+        //             "📜 Full match history with delete option",
+        //         ]
+        //     }
+        // },
+        // {
+        //     "name": {
+        //         "ru": "AstroDiary — Астрологический дневник",
+        //         "en": "AstroDiary — Astrological Diary"
+        //     },
+        //     "description": {
+        //         "ru": "Веб-приложение для ведения астрологического дневника и самоанализа. Пользователь может регистрироваться, получать астрологический прогноз (симуляция положения планет) и вести личный дневник, где каждая запись автоматически привязывается к текущим позициям планет.",
+        //         "en": "Web application for astrological diary keeping and self-reflection. User can register, receive an astrological forecast (simulation of planetary positions), and keep a personal diary where each entry is automatically linked to current planetary positions."
+        //     },
+        //     "link": "https://github.com/Saven0k/AstroDiary",
+        //     "github": "https://github.com/Saven0k/AstroDiary",
+        //     "stack": [
+        //         "React",
+        //         "TypeScript",
+        //         "FastAPI",
+        //         "Python",
+        //         "PostgreSQL",
+        //         "SQLAlchemy",
+        //         "JWT",
+        //         "Vite",
+        //         "Axios"
+        //     ],
+        //     "image": "astrodiary",
+        //     "features": {
+        //         "ru": [
+        //             "🔐 Регистрация и авторизация с JWT токенами",
+        //             "📊 Личный кабинет с данными пользователя (имя, дата и место рождения)",
+        //             "🔮 Астрологический прогноз на основе даты рождения (симуляция)"
+        //         ],
+        //         "en": [
+        //             "🔐 JWT-based registration and authentication",
+        //             "📊 Personal dashboard with user data (name, birth date and place)",
+        //             "🔮 Astrological forecast based on birth date (simulation)"
+        //         ]
+        //     }
+        // }
     ]
 };
