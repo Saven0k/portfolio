@@ -181,7 +181,7 @@ export const profile = {
                 ],
                 technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
                 link: "https://github.com/Saven0k/portfolio"
-            }, 
+            },
             {
                 type: "achievement",
                 title: "Призер чемпионата «Профессионалы»",
@@ -230,6 +230,23 @@ export const profile = {
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
                 link: "https://github.com/Saven0k/CarMatch"
             },
+            {
+                type: "project",
+                title: "Digital Control — Система видеоаналитики на производстве",
+                subtitle: "Платформа мониторинга промышленной безопасности",
+                date: "Июнь 2026 — Настоящее время",
+                description: "Современное веб-приложение для мониторинга безопасности на производственных объектах с использованием технологий искусственного интеллекта",
+                details: [
+                    "Разработал адаптивное одностраничное приложение на React 18, TypeScript и Vite",
+                    "Реализовал интерактивный каталог сценариев безопасности с фильтрацией по типам работ (Бурение, ТКРС, Транспорт)",
+                    "Создал адаптивный UI с плавными анимациями, категоризированным отображением сценариев и раскрывающимися карточками с деталями",
+                    "Оптимизировал отображение изображений для Retina-экранов с поддержкой разрешения 2x и отложенной загрузкой",
+                    "Интегрировал плавный скролл для улучшения UX при раскрытии деталей сценария",
+                    "Настроил сборку проекта и пайплайн деплоя на GitHub Pages"
+                ],
+                technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
+                link: "https://github.com/Saven0k/Digitalcontrol"
+            }
         ],
         en: [
             {
@@ -290,7 +307,7 @@ export const profile = {
                 ],
                 technologies: ["SPA", "REST API", "WordPress", "HTML/CSS", "JavaScript"],
                 link: "https://profi.copp78.ru/2025"
-            }, 
+            },
             {
                 type: "project",
                 title: "AstroDiary — Astrological Diary",
@@ -323,8 +340,24 @@ export const profile = {
                 ],
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
                 link: "https://github.com/Saven0k/CarMatch"
-            }
-
+            },
+            {
+                type: "project",
+                title: "Digital Control — Industrial Video Analytics System",
+                subtitle: "Production Safety Monitoring Platform",
+                date: "June 2026 — Present",
+                description: "A modern web application for monitoring industrial safety using artificial intelligence technologies",
+                details: [
+                    "Developed a responsive single-page application using React 18, TypeScript, and Vite",
+                    "Implemented an interactive catalog of safety scenarios with filtering by work type (Drilling, Workover, Transport)",
+                    "Created an adaptive UI with smooth animations, categorized scenario display, and expandable detail cards",
+                    "Optimized image rendering for Retina displays with 2x resolution support and lazy loading",
+                    "Integrated smooth scroll behavior for better UX when expanding scenario details",
+                    "Configured project build and deployment pipeline to GitHub Pages"
+                ],
+                technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
+                link: "https://github.com/Saven0k/Digitalcontrol"
+            },
         ]
     },
 
@@ -406,69 +439,5 @@ export const profile = {
                 ]
             }
         },
-        // {
-        //     name: {
-        //         ru: "CarMatch — Умный подбор автомобиля",
-        //         en: "CarMatch — Smart Car Matching"
-        //     },
-        //     description: {
-        //         ru: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя. Анализирует ответы на 5 простых вопросов и рекомендует идеальную марку авто с эмодзи и обоснованием выбора.",
-        //         en: "Web application for car matching based on user's psycho-geometric profile. Analyzes answers to 5 simple questions and recommends the perfect car brand with emoji and reasoning."
-        //     },
-        //     link: "https://github.com/Saven0k/CarMatch",
-        //     github: "https://github.com/Saven0k/CarMatch",
-        //     stack: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Framer Motion"],
-        //     image: "carmatch",
-        //     features: {
-        //         ru: [
-        //             "🔐 Авторизация и регистрация с JWT токенами",
-        //             "🎨 5 вопросов для подбора автомобиля",
-        //             "🤖 Умная логика подбора с эмодзи",
-        //             "📜 История всех подборов с возможностью удаления",
-        //         ],
-        //         en: [
-        //             "🔐 JWT-based authentication and registration",
-        //             "🎨 5 questions for car matching",
-        //             "🤖 Smart matching logic with emojis",
-        //             "📜 Full match history with delete option",
-        //         ]
-        //     }
-        // },
-        // {
-        //     "name": {
-        //         "ru": "AstroDiary — Астрологический дневник",
-        //         "en": "AstroDiary — Astrological Diary"
-        //     },
-        //     "description": {
-        //         "ru": "Веб-приложение для ведения астрологического дневника и самоанализа. Пользователь может регистрироваться, получать астрологический прогноз (симуляция положения планет) и вести личный дневник, где каждая запись автоматически привязывается к текущим позициям планет.",
-        //         "en": "Web application for astrological diary keeping and self-reflection. User can register, receive an astrological forecast (simulation of planetary positions), and keep a personal diary where each entry is automatically linked to current planetary positions."
-        //     },
-        //     "link": "https://github.com/Saven0k/AstroDiary",
-        //     "github": "https://github.com/Saven0k/AstroDiary",
-        //     "stack": [
-        //         "React",
-        //         "TypeScript",
-        //         "FastAPI",
-        //         "Python",
-        //         "PostgreSQL",
-        //         "SQLAlchemy",
-        //         "JWT",
-        //         "Vite",
-        //         "Axios"
-        //     ],
-        //     "image": "astrodiary",
-        //     "features": {
-        //         "ru": [
-        //             "🔐 Регистрация и авторизация с JWT токенами",
-        //             "📊 Личный кабинет с данными пользователя (имя, дата и место рождения)",
-        //             "🔮 Астрологический прогноз на основе даты рождения (симуляция)"
-        //         ],
-        //         "en": [
-        //             "🔐 JWT-based registration and authentication",
-        //             "📊 Personal dashboard with user data (name, birth date and place)",
-        //             "🔮 Astrological forecast based on birth date (simulation)"
-        //         ]
-        //     }
-        // }
     ]
 };
