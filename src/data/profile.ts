@@ -234,7 +234,7 @@ export const profile = {
                 type: "project",
                 title: "Digital Control — Система видеоаналитики на производстве",
                 subtitle: "Платформа мониторинга промышленной безопасности",
-                date: "Июнь 2026 — Настоящее время",
+                date: "Июнь 2026",
                 description: "Современное веб-приложение для мониторинга безопасности на производственных объектах с использованием технологий искусственного интеллекта",
                 details: [
                     "Разработал адаптивное одностраничное приложение на React 18, TypeScript и Vite",
@@ -345,7 +345,7 @@ export const profile = {
                 type: "project",
                 title: "Digital Control — Industrial Video Analytics System",
                 subtitle: "Production Safety Monitoring Platform",
-                date: "June 2026 — Present",
+                date: "June 2026",
                 description: "A modern web application for monitoring industrial safety using artificial intelligence technologies",
                 details: [
                     "Developed a responsive single-page application using React 18, TypeScript, and Vite",
