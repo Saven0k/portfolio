@@ -296,7 +296,7 @@ export const profile = {
                 ],
                 technologies: ["React", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Redis", "Docker", "WebSocket"],
                 link: "https://github.com/Saven0k/ArtGallary"
-            }
+            },
             {
                 type: "project",
                 title: "Frontend Developer",
