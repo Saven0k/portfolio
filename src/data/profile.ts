@@ -154,6 +154,23 @@ export const profile = {
             },
             {
                 type: "project",
+                title: "Gallery - Платформа для художников",
+                subtitle: "Персональный проект",
+                date: "Январь 2026 — Июнь 2026",
+                description: "Создал полноценную галерею для художников с функционалом публикации, модерации и социального взаимодействия",
+                details: [
+                    "Разработал архитектуру приложения на NestJS (бэкенд) и React (фронтенд)",
+                    "Реализовал систему модерации контента с разграничением ролей (админ, модератор, художник, пользователь)",
+                    "Интегрировал автоматический перевод контента на 5 языков через LibreTranslate API",
+                    "Создал систему лайков и избранного с хранением в localStorage",
+                    "Реализовал чат поддержки в реальном времени",
+                    "Настроил Docker Compose для развертывания проекта"
+                ],
+                technologies: ["React", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Redis", "Docker", "WebSocket"],
+                link: "https://github.com/Saven0k/Gallery"
+            },
+            {
+                type: "project",
                 title: "Frontend разработчик",
                 subtitle: "Финансовый учет",
                 date: "Апрель 2025 — Октябрь 2025",
@@ -263,6 +280,23 @@ export const profile = {
                 technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
                 link: "https://github.com/Saven0k/BaseKnowledge"
             },
+            {
+                type: "project",
+                title: "Gallery - Art Platform",
+                subtitle: "Personal Project",
+                date: "January 2026 — June 2026",
+                description: "Built a full-featured gallery for artists with publishing, moderation, and social interaction functionality",
+                details: [
+                    "Designed application architecture with NestJS (backend) and React (frontend)",
+                    "Implemented content moderation system with role-based access (admin, moderator, artist, user)",
+                    "Integrated automatic content translation into 5 languages via LibreTranslate API",
+                    "Created likes and favorites system with localStorage storage",
+                    "Developed real-time support chat",
+                    "Set up Docker Compose for project deployment"
+                ],
+                technologies: ["React", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Redis", "Docker", "WebSocket"],
+                link: "https://github.com/Saven0k/ArtGallary"
+            }
             {
                 type: "project",
                 title: "Frontend Developer",
