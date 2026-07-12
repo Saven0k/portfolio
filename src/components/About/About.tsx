@@ -34,6 +34,32 @@ const About = () => {
               <li key={idx}>{point}</li>
             ))}
           </ul>
+          <div className="about__mentions">
+            <h3 className="mentions-title">
+              {lang === "ru" ? "📰 Упоминания в СМИ" : "📰 Mentions"}
+            </h3>
+            <div className="mentions__list">
+              {profile.mentions[lang].map((item, idx) => (
+                <a
+                  key={idx}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mention-item"
+                >
+                  <span className="mention-icon">{item.icon}</span>
+                  <div className="mention-content">
+                    <div className="mention-header">
+                      <h4 className="mention-title">{item.title}</h4>
+                      <span className="mention-date">{item.date}</span>
+                    </div>
+                    <p className="mention-description">{item.description}</p>
+                    <span className="mention-link">🔗 {lang === "ru" ? "Читать новость" : "Read news"}</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <motion.div

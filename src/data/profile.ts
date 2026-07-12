@@ -57,6 +57,40 @@ export const profile = {
             ]
         }
     },
+    mentions: {
+        ru: [
+            {
+                title: "Бронзовый призер чемпионата «Профессионалы»",
+                description: "Занял 3 место в компетенции «Веб-технологии» на региональном этапе Всероссийского чемпионата «Профессионалы» (2025)",
+                link: "https://admcol.ru/novosti/2025-03-12-nagrazhdenie-professionalov",
+                date: "Март 2025",
+                icon: "🥉"
+            },
+            {
+                title: "Награждение от индустриального партнера",
+                description: "Получил специальный приз от компании ООО «ГИПЕР» за выдающиеся результаты в чемпионате «Профессионалы», а также сертификат на стажировку (2026)",
+                link: "https://admcol.ru/novosti/2026-04-03-v-khekslet-kolledzhe-nagradili-pobediteley-i-prizerov-chempionata-professionaly",
+                date: "Апрель 2026",
+                icon: "🏆"
+            }
+        ],
+        en: [
+            {
+                title: "Bronze Prize-winner of 'Professionals' Championship",
+                description: "Took 3rd place in the 'Web Technologies' category at the regional stage of the All-Russian Championship 'Professionals' (2025)",
+                link: "https://admcol.ru/novosti/2025-03-12-nagrazhdenie-professionalov",
+                date: "March 2025",
+                icon: "🥉"
+            },
+            {
+                title: "Award from Industry Partner",
+                description: "Received a special prize from 'GIPER' LLC for outstanding results in the 'Professionals' championship, along with an internship certificate (2026)",
+                link: "https://admcol.ru/novosti/2026-04-03-v-khekslet-kolledzhe-nagradili-pobediteley-i-prizerov-chempionata-professionaly",
+                date: "April 2026",
+                icon: "🏆"
+            }
+        ]
+    },
 
     skills: {
         frontend: [
@@ -238,7 +272,7 @@ export const profile = {
                     "Адаптировал интерфейс под мобильные устройства, внедрил UX-решения для улучшения навигации"
                 ],
                 technologies: ["SPA", "REST API", "Django", "Python", "PostgreSQL", "React", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://profi.copp78.ru/2025"
+                link: "https://cloud.mail.ru/public/zUiy/qTzHWjM1v/%D0%92%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8.pdf"
             },
             {
                 type: "project",
@@ -297,7 +331,7 @@ export const profile = {
                     "Сверстал адаптивный интерфейс с использованием современного CSS (Flexbox, Grid, медиа-запросы)"
                 ],
                 technologies: ["SPA", "REST API", "Django", "MySQL", "Python", "React", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://profi.copp78.ru/2024"
+                link: "https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2F90kiqzN3WAvyfst1bRLU3Agkf0lGLPaiF7TFpgKV7V4Av42SGA5paYVI5Ge2%2Fz7qq%2FJ6bpmRyOJonT3VoXnDag%3D%3D&name=%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B%20%D0%A0%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%8D%D1%82%D0%B0%D0%BF%D0%B0%20%D0%A1%D0%9F%D0%B1%202024.pdf"
             }
         ],
         en: [
@@ -396,7 +430,7 @@ export const profile = {
                     "Adapted interface for mobile devices with UX improvements for better navigation"
                 ],
                 technologies: ["SPA", "REST API", "Django", "Python", "PostgreSQL", "React", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://profi.copp78.ru/2025"
+                link: "https://cloud.mail.ru/public/zUiy/qTzHWjM1v/%D0%92%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8.pdf"
             },
             {
                 type: "project",
@@ -455,7 +489,7 @@ export const profile = {
                     "Created a responsive interface using modern CSS (Flexbox, Grid, media queries)"
                 ],
                 technologies: ["SPA", "REST API", "Django", "MySQL", "Python", "React", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://profi.copp78.ru/2024"
+                link: "https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2F90kiqzN3WAvyfst1bRLU3Agkf0lGLPaiF7TFpgKV7V4Av42SGA5paYVI5Ge2%2Fz7qq%2FJ6bpmRyOJonT3VoXnDag%3D%3D&name=%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B%20%D0%A0%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%8D%D1%82%D0%B0%D0%BF%D0%B0%20%D0%A1%D0%9F%D0%B1%202024.pdf"
             }
         ]
     },
