@@ -26,11 +26,10 @@
   &__timeline {
     position: relative;
     padding: 20px 30px 30px 0;
-    max-height: 600px;
+    max-height: 800px;
     overflow-y: auto;
     overflow-x: hidden;
 
-    /* Кастомный скроллбар */
     &::-webkit-scrollbar {
       width: 6px;
     }
@@ -49,11 +48,43 @@
       }
     }
 
+    /* ===== СЧЁТЧИК СВЕРХУ ===== */
+    .timeline-counter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 25px;
+      padding-left: 40px;
+      background: linear-gradient(135deg, rgba(124, 92, 255, 0.15), rgba(0, 198, 255, 0.05));
+      padding: 12px 20px 12px 40px;
+      border-radius: 40px;
+      border: 1px solid rgba(124, 92, 255, 0.2);
+      width: fit-content;
+      backdrop-filter: blur(10px);
+
+      .counter-number {
+        font-size: 28px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #7c5cff, #00c6ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        line-height: 1;
+      }
+
+      .counter-label {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-primary);
+        opacity: 0.7;
+      }
+    }
+
     .timeline-line {
       position: absolute;
       left: 11px;
-      top: 40px;
-      bottom: -190%;
+      top: 105px;
+      bottom: -965px;
       width: 2px;
       background: linear-gradient(180deg, #7c5cff, #00c6ff);
       border-radius: 2px;
@@ -61,7 +92,7 @@
 
     .timeline-item {
       position: relative;
-      margin-bottom: 60px;
+      margin-bottom: 35px;
       cursor: pointer;
       transition: all 0.3s ease;
 
@@ -103,7 +134,7 @@
 
     .timeline-content {
       margin-left: 40px;
-      padding: 20px 24px;
+      padding: 16px 24px;
       background: var(--card-bg);
       border-radius: 16px;
       border: 1px solid rgba(124, 92, 255, 0.15);
@@ -697,6 +728,7 @@
 
 [data-theme="light"] {
   .experience {
+
     &__timeline .timeline-content,
     &__details {
       background: rgba(255, 255, 255, 0.9);

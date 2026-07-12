@@ -15,6 +15,7 @@ const Experience = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const timeline = profile.unifiedTimeline[lang];
+  const totalProjects = timeline.length;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -119,6 +120,7 @@ const Experience = () => {
       )}
     </>
   );
+
   return (
     <section id="experience" className="experience" ref={ref}>
       <motion.h2
@@ -131,6 +133,14 @@ const Experience = () => {
 
       <div className="experience__container">
         <div className="experience__timeline">
+          {/* Счётчик сверху */}
+          <div className="timeline-counter">
+            <span className="counter-number">{totalProjects}</span>
+            <span className="counter-label">
+              {lang === "ru" ? "проектов" : "projects"}
+            </span>
+          </div>
+          
           <div className="timeline-line"></div>
           {timeline.map((item, idx) => (
             <motion.div

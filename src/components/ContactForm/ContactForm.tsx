@@ -51,7 +51,7 @@ const ContactForm = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          {lang === "ru" ? "📨 Написать мне" : "📨 Write me"}
+          {lang === "ru" ? "📨 Связаться со мной" : "📨 Contact me"}
         </motion.h2>
         
         <motion.p
@@ -61,7 +61,7 @@ const ContactForm = () => {
           transition={{ delay: 0.3 }}
         >
           {lang === "ru" 
-            ? "Заполните форму и я свяжусь с вами в ближайшее время" 
+            ? "Заполните форму, и я свяжусь с вами в ближайшее время" 
             : "Fill out the form and I'll get back to you soon"}
         </motion.p>
 

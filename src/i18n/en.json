@@ -5,12 +5,13 @@
     "experience": "Experience",
     "achievements": "Achievements",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Social",
+    "contacts": "Contacts"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "role": "Frontend & Full Stack Developer",
-    "view_work": "View Work",
+    "role": "Full Stack Developer",
+    "view_work": "View Projects",
     "contact_me": "Contact Me"
   },
   "about": {
@@ -49,10 +50,8 @@
     "title": "Contact",
     "available": "Always open to new opportunities!",
     "email": "Email",
-    "phone": "Phone",
     "github": "GitHub",
-    "telegram": "Telegram",
-    "vkontakte": "VKontakte"
+    "telegram": "Telegram"
   },
   "achievements": {
     "title": "🏆 Achievements"

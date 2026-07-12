@@ -25,16 +25,14 @@ export const profile = {
         en: "Full Stack Developer"
     },
     email: "romasav2017@gmail.com",
-    phone: "+79990374113",
     github: "https://github.com/Saven0k",
     telegram: "@owl11112",
-    vkontakte: "https://vk.com/savenok0",
     experienceYears: 2,
 
     contacts: [
         { name: "Email", link: "mailto:romasav2017@gmail.com" },
         { name: "Telegram", link: "https://t.me/owl11112" },
-        { name: "VKontakte", link: "https://vk.com/savenok0" }
+        { name: "GitHub", link: "https://github.com/Saven0k" }
     ],
 
     about: {
@@ -107,8 +105,12 @@ export const profile = {
                 en: "2024 — 2027"
             },
             status: {
-                ru: "👨‍🎓 Обучаюсь",
-                en: "👨‍🎓 Studying"
+                ru: "👨‍🎓 Обучаюсь очно",
+                en: "👨‍🎓 Studying full-time"
+            },
+            speciality: {
+                ru: "Информационные системы и программирование",
+                en: "Information systems and programming"
             }
         },
         {
@@ -130,8 +132,12 @@ export const profile = {
                 en: "2025 — 2029"
             },
             status: {
-                ru: "🎓 Заочно",
-                en: "🎓 Part-time"
+                ru: "🎓 Обучаюсь заочно",
+                en: "🎓 Studying Part-time"
+            },
+            speciality: {
+                ru: "Прикладная информатика",
+                en: "Applied computer science"
             }
         }
     ],
@@ -140,17 +146,67 @@ export const profile = {
         ru: [
             {
                 type: "project",
-                title: "Full Stack разработчик",
-                subtitle: "Хекслет колледж",
-                date: "Март 2025 — Декабрь 2025",
-                description: "Участвовал в полном цикле разработки веб-приложения для колледжа",
+                title: "Digital Control — Система видеоаналитики на производстве",
+                subtitle: "Платформа мониторинга промышленной безопасности",
+                date: "Июнь 2026",
+                description: "Современное веб-приложение для мониторинга безопасности на производственных объектах с использованием технологий искусственного интеллекта",
                 details: [
-                    "Разрабатывал фронтенд-часть с использованием React, TypeScript, Redux-toolkit",
-                    "Реализовал бекенд-функциональность на Node.js, Express, TypeScript, Prisma",
-                    "Оптимизировал процессы взаимодействия между фронтендом и бекендом"
+                    "Разработал адаптивное одностраничное приложение на React 18, TypeScript и Vite",
+                    "Реализовал интерактивный каталог сценариев безопасности с фильтрацией по типам работ (Бурение, ТКРС, Транспорт)",
+                    "Создал адаптивный UI с плавными анимациями, категоризированным отображением сценариев и раскрывающимися карточками с деталями",
+                    "Оптимизировал отображение изображений для Retina-экранов с поддержкой разрешения 2x и отложенной загрузкой",
+                    "Интегрировал плавный скролл для улучшения UX при раскрытии деталей сценария",
+                    "Настроил сборку проекта и пайплайн деплоя на GitHub Pages"
                 ],
-                technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
-                link: "https://github.com/Saven0k/BaseKnowledge"
+                technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
+                link: "https://github.com/Saven0k/Digitalcontrol"
+            },
+            {
+                type: "project",
+                title: "CarMatch — Умный подбор автомобиля",
+                subtitle: "Дипломный проект",
+                date: "Июнь 2026",
+                description: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя",
+                details: [
+                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
+                    "Разработал фронтенд на React с TypeScript, адаптивным дизайном и анимациями Framer Motion",
+                    "Создал бэкенд на FastAPI с JWT-аутентификацией, хэшированием паролей (bcrypt) и CRUD операциями",
+                    "Реализовал умную логику подбора автомобиля на основе 5 пользовательских ответов (возраст, цвет, напиток, ритм жизни, стиль одежды)",
+                    "Спроектировал и оптимизировал базу данных PostgreSQL с индексами для высокой производительности"
+                ],
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
+                link: "https://github.com/Saven0k/CarMatch"
+            },
+            {
+                type: "project",
+                title: "AstroDiary — Астрологический дневник",
+                subtitle: "Дипломный проект",
+                date: "Июнь 2026",
+                description: "Веб-приложение для ведения астрологического дневника и самоанализа",
+                details: [
+                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
+                    "Разработал фронтенд на React с TypeScript и клиентской маршрутизацией",
+                    "Создал бэкенд на FastAPI с JWT-аутентификацией и CRUD операциями",
+                    "Реализовал систему астрологических прогнозов (симуляция положения планет)",
+                    "Разработал базу данных PostgreSQL с отношением один-ко-многим",
+                    "Интегрировал Framer Motion для плавных анимаций интерфейса"
+                ],
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
+                link: "https://github.com/Saven0k/AstroDiary"
+            },
+            {
+                type: "achievement",
+                title: "Призер чемпионата «Профессионалы»",
+                subtitle: "Веб-технологии",
+                date: "Январь 2026 — Март 2026",
+                description: "Призовое место на региональном этапе всероссийского чемпионата «Профессионалы» в компетенции «Веб-технологии»",
+                details: [
+                    "Разработал SPA-приложение на React с нуля, используя современные подходы к компонентной архитектуре",
+                    "Реализовал бэкенд на FastAPI с REST API, включая аутентификацию и валидацию данных",
+                    "Оптимизировал интерфейс для всех типов устройств, обеспечив высокую производительность"
+                ],
+                technologies: ["SPA", "REST API", "FastAPI", "Python", "React", "PostgreSQL", "SQLAlchemy", "HTML/CSS", "JavaScript"],
+                link: "https://profi.copp78.ru/2026"
             },
             {
                 type: "project",
@@ -170,6 +226,51 @@ export const profile = {
                 link: "https://github.com/Saven0k/Gallery"
             },
             {
+                type: "achievement",
+                title: "Призер чемпионата «Профессионалы»",
+                subtitle: "Веб-технологии",
+                date: "Январь 2025 — Март 2025",
+                description: "Призовое место на региональном этапе всероссийского чемпионата «Профессионалы» в компетенции «Веб-технологии»",
+                details: [
+                    "Разработал одностраничное приложение на React, организовав эффективное управление состоянием",
+                    "Спроектировал REST API на Django Rest Framework с системой прав доступа и ролей",
+                    "Развернул финальный проект на WordPress, настроил базу данных и серверное окружение",
+                    "Адаптировал интерфейс под мобильные устройства, внедрил UX-решения для улучшения навигации"
+                ],
+                technologies: ["SPA", "REST API", "Django", "Python", "PostgreSQL", "React", "WordPress", "HTML/CSS", "JavaScript"],
+                link: "https://profi.copp78.ru/2025"
+            },
+            {
+                type: "project",
+                title: "Портфолио-сайт",
+                subtitle: "Персональный сайт-портфолио",
+                date: "Январь 2025",
+                description: "Современное портфолио с адаптивным дизайном и полной локализацией",
+                details: [
+                    "Разработал полностью адаптивный интерфейс с поддержкой мобильных устройств",
+                    "Реализовал тёмную и светлую тему с сохранением выбора в localStorage",
+                    "Добавил полную локализацию на русский и английский языки",
+                    "Создал интерактивную секцию навыков с модальными окнами",
+                    "Интегрировал анимации с использованием Framer Motion"
+                ],
+                technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
+                link: "https://github.com/Saven0k/portfolio"
+            },
+            {
+                type: "project",
+                title: "Full Stack разработчик",
+                subtitle: "Хекслет колледж",
+                date: "Март 2025 — Декабрь 2025",
+                description: "Участвовал в полном цикле разработки веб-приложения для колледжа",
+                details: [
+                    "Разрабатывал фронтенд-часть с использованием React, TypeScript, Redux-toolkit",
+                    "Реализовал бекенд-функциональность на Node.js, Express, TypeScript, Prisma",
+                    "Оптимизировал процессы взаимодействия между фронтендом и бекендом"
+                ],
+                technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
+                link: "https://github.com/Saven0k/BaseKnowledge"
+            },
+            {
                 type: "project",
                 title: "Frontend разработчик",
                 subtitle: "Финансовый учет",
@@ -184,101 +285,86 @@ export const profile = {
                 link: "https://github.com/Saven0k/finance-tracker"
             },
             {
-                type: "project",
-                title: "Портфолио-сайт",
-                subtitle: "Персональный сайт-портфолио",
-                date: "2025",
-                description: "Современное портфолио с адаптивным дизайном и полной локализацией",
-                details: [
-                    "Разработал полностью адаптивный интерфейс с поддержкой мобильных устройств",
-                    "Реализовал тёмную и светлую тему с сохранением выбора в localStorage",
-                    "Добавил полную локализацию на русский и английский языки",
-                    "Создал интерактивную секцию навыков с модальными окнами",
-                    "Интегрировал анимации с использованием Framer Motion"
-                ],
-                technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
-                link: "https://github.com/Saven0k/portfolio"
-            },
-            {
                 type: "achievement",
                 title: "Призер чемпионата «Профессионалы»",
                 subtitle: "Веб-технологии",
-                date: "2024",
-                description: "Призовое место на региональном этапе всероссийского чемпионата",
+                date: "Январь 2024 — Март 2024",
+                description: "Призовое место на региональном этапе всероссийского чемпионата «Профессионалы» в компетенции «Веб-технологии»",
                 details: [
-                    "Разработал SPA приложение с нуля",
-                    "Создал REST API для приложения",
-                    "Развернул проект на WordPress",
-                    "Выполнил верстку адаптивного интерфейса"
+                    "Создал SPA-приложение на React, реализовал клиентскую маршрутизацию и управление состоянием",
+                    "Разработал бэкенд на Django с REST API для обработки данных и взаимодействия с фронтендом",
+                    "Настроил хостинг на WordPress и выполнил интеграцию с внешними сервисами",
+                    "Сверстал адаптивный интерфейс с использованием современного CSS (Flexbox, Grid, медиа-запросы)"
                 ],
-                technologies: ["SPA", "REST API", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://profi.copp78.ru/2025"
+                technologies: ["SPA", "REST API", "Django", "MySQL", "Python", "React", "WordPress", "HTML/CSS", "JavaScript"],
+                link: "https://profi.copp78.ru/2024"
+            }
+        ],
+        en: [
+            {
+                type: "project",
+                title: "Digital Control — Industrial Video Analytics System",
+                subtitle: "Production Safety Monitoring Platform",
+                date: "June 2026",
+                description: "A modern web application for monitoring industrial safety using artificial intelligence technologies",
+                details: [
+                    "Developed a responsive single-page application using React 18, TypeScript, and Vite",
+                    "Implemented an interactive catalog of safety scenarios with filtering by work type (Drilling, Workover, Transport)",
+                    "Created an adaptive UI with smooth animations, categorized scenario display, and expandable detail cards",
+                    "Optimized image rendering for Retina displays with 2x resolution support and lazy loading",
+                    "Integrated smooth scroll behavior for better UX when expanding scenario details",
+                    "Configured project build and deployment pipeline to GitHub Pages"
+                ],
+                technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
+                link: "https://github.com/Saven0k/Digitalcontrol"
             },
             {
                 type: "project",
-                title: "AstroDiary — Астрологический дневник",
-                subtitle: "Дипломный проект",
-                date: "2025",
-                description: "Веб-приложение для ведения астрологического дневника и самоанализа",
+                title: "CarMatch — Smart Car Matching",
+                subtitle: "Graduation Project",
+                date: "June 2026",
+                description: "Web application for car matching based on user's psycho-geometric profile",
                 details: [
-                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
-                    "Разработал фронтенд на React с TypeScript и клиентской маршрутизацией",
-                    "Создал бэкенд на FastAPI с JWT-аутентификацией и CRUD операциями",
-                    "Реализовал систему астрологических прогнозов (симуляция положения планет)",
-                    "Разработал базу данных PostgreSQL с отношением один-ко-многим",
-                    "Интегрировал Framer Motion для плавных анимаций интерфейса"
-                ],
-                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
-                link: "https://github.com/Saven0k/AstroDiary"
-            },
-            {
-                type: "project",
-                title: "CarMatch — Умный подбор автомобиля",
-                subtitle: "Дипломный проект",
-                date: "2026",
-                description: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя",
-                details: [
-                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
-                    "Разработал фронтенд на React с TypeScript, адаптивным дизайном и анимациями Framer Motion",
-                    "Создал бэкенд на FastAPI с JWT-аутентификацией, хэшированием паролей (bcrypt) и CRUD операциями",
-                    "Реализовал умную логику подбора автомобиля на основе 5 пользовательских ответов (возраст, цвет, напиток, ритм жизни, стиль одежды)",
-                    "Спроектировал и оптимизировал базу данных PostgreSQL с индексами для высокой производительности"
+                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
+                    "Developed React frontend with TypeScript, responsive design, and Framer Motion animations",
+                    "Created FastAPI backend with JWT authentication, password hashing (bcrypt), and CRUD operations",
+                    "Implemented smart car matching logic based on 5 user answers (age, color, drink, lifestyle, clothing style)",
+                    "Designed and optimized PostgreSQL database with indexes for high performance"
                 ],
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
                 link: "https://github.com/Saven0k/CarMatch"
             },
             {
                 type: "project",
-                title: "Digital Control — Система видеоаналитики на производстве",
-                subtitle: "Платформа мониторинга промышленной безопасности",
-                date: "Июнь 2026",
-                description: "Современное веб-приложение для мониторинга безопасности на производственных объектах с использованием технологий искусственного интеллекта",
+                title: "AstroDiary — Astrological Diary",
+                subtitle: "Graduation Project",
+                date: "June 2026",
+                description: "Web application for astrological diary keeping and self-reflection",
                 details: [
-                    "Разработал адаптивное одностраничное приложение на React 18, TypeScript и Vite",
-                    "Реализовал интерактивный каталог сценариев безопасности с фильтрацией по типам работ (Бурение, ТКРС, Транспорт)",
-                    "Создал адаптивный UI с плавными анимациями, категоризированным отображением сценариев и раскрывающимися карточками с деталями",
-                    "Оптимизировал отображение изображений для Retina-экранов с поддержкой разрешения 2x и отложенной загрузкой",
-                    "Интегрировал плавный скролл для улучшения UX при раскрытии деталей сценария",
-                    "Настроил сборку проекта и пайплайн деплоя на GitHub Pages"
+                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
+                    "Developed React frontend with TypeScript and client-side routing",
+                    "Created FastAPI backend with JWT authentication and CRUD operations",
+                    "Implemented astrological forecast system (planetary positions simulation)",
+                    "Designed PostgreSQL database with one-to-many relationships",
+                    "Integrated Framer Motion for smooth UI animations"
                 ],
-                technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
-                link: "https://github.com/Saven0k/Digitalcontrol"
-            }
-        ],
-        en: [
+                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
+                link: "https://github.com/Saven0k/AstroDiary"
+            },
             {
-                type: "project",
-                title: "Full Stack Developer",
-                subtitle: "Hexlet College",
-                date: "March 2025 — December 2025",
-                description: "Participated in the full cycle of web application development for college",
+                type: "achievement",
+                title: "Prize-winner of 'Professionals' championship",
+                subtitle: "Web Technologies",
+                date: "January 2026 — March 2026",
+                description: "Prize-winning place at the regional stage of the All-Russian championship 'Professionals' in the 'Web Technologies' category",
                 details: [
-                    "Developed frontend using React, TypeScript, Redux-toolkit",
-                    "Implemented backend functionality with Node.js, Express, TypeScript, Prisma",
-                    "Optimized frontend-backend interaction processes"
+                    "Developed an SPA application with React from scratch using modern component-based architecture",
+                    "Built a FastAPI backend with REST API including authentication and data validation",
+                    "Integrated with WordPress and configured CI/CD pipeline for automated deployment",
+                    "Optimized the interface for all device types ensuring high performance"
                 ],
-                technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
-                link: "https://github.com/Saven0k/BaseKnowledge"
+                technologies: ["SPA", "REST API", "FastAPI", "Python", "React", "PostgreSQL", "SQLAlchemy", "HTML/CSS", "JavaScript"],
+                link: "https://profi.copp78.ru/2026"
             },
             {
                 type: "project",
@@ -298,6 +384,51 @@ export const profile = {
                 link: "https://github.com/Saven0k/ArtGallary"
             },
             {
+                type: "achievement",
+                title: "Prize-winner of 'Professionals' championship",
+                subtitle: "Web Technologies",
+                date: "January 2025 — March 2025",
+                description: "Prize-winning place at the regional stage of the All-Russian championship 'Professionals' in the 'Web Technologies' category",
+                details: [
+                    "Created a single-page application with React, implementing efficient state management",
+                    "Designed REST API using Django Rest Framework with role-based access control",
+                    "Deployed the final project on WordPress, configured database and server environment",
+                    "Adapted interface for mobile devices with UX improvements for better navigation"
+                ],
+                technologies: ["SPA", "REST API", "Django", "Python", "PostgreSQL", "React", "WordPress", "HTML/CSS", "JavaScript"],
+                link: "https://profi.copp78.ru/2025"
+            },
+            {
+                type: "project",
+                title: "Portfolio Website",
+                subtitle: "Personal portfolio website",
+                date: "January 2025",
+                description: "Modern portfolio with responsive design and full localization",
+                details: [
+                    "Developed fully responsive interface with mobile device support",
+                    "Implemented dark/light theme with localStorage persistence",
+                    "Added full Russian/English localization",
+                    "Created interactive skills section with modal windows",
+                    "Integrated animations using Framer Motion"
+                ],
+                technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
+                link: "https://github.com/Saven0k/portfolio"
+            },
+            {
+                type: "project",
+                title: "Full Stack Developer",
+                subtitle: "Hexlet College",
+                date: "March 2025 — December 2025",
+                description: "Participated in the full cycle of web application development for college",
+                details: [
+                    "Developed frontend using React, TypeScript, Redux-toolkit",
+                    "Implemented backend functionality with Node.js, Express, TypeScript, Prisma",
+                    "Optimized frontend-backend interaction processes"
+                ],
+                technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
+                link: "https://github.com/Saven0k/BaseKnowledge"
+            },
+            {
                 type: "project",
                 title: "Frontend Developer",
                 subtitle: "Finance Tracker",
@@ -312,86 +443,20 @@ export const profile = {
                 link: "https://github.com/Saven0k/finance-tracker"
             },
             {
-                type: "project",
-                title: "Portfolio Website",
-                subtitle: "Personal portfolio website",
-                date: "2025",
-                description: "Modern portfolio with responsive design and full localization",
-                details: [
-                    "Developed fully responsive interface with mobile device support",
-                    "Implemented dark/light theme with localStorage persistence",
-                    "Added full Russian/English localization",
-                    "Created interactive skills section with modal windows",
-                    "Integrated animations using Framer Motion"
-                ],
-                technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
-                link: "https://github.com/Saven0k/portfolio"
-            },
-            {
                 type: "achievement",
                 title: "Prize-winner of 'Professionals' championship",
                 subtitle: "Web Technologies",
-                date: "2024",
-                description: "Prize-winning place at the regional stage of the All-Russian championship",
+                date: "January 2024 — March 2024",
+                description: "Prize-winning place at the regional stage of the All-Russian championship 'Professionals' in the 'Web Technologies' category",
                 details: [
-                    "Developed an SPA application from scratch",
-                    "Created a REST API for the application",
-                    "Deployed the project on WordPress",
-                    "Implemented responsive interface layout"
+                    "Built an SPA application with React, implementing client-side routing and state management",
+                    "Developed a FastAPI backend with REST API for data processing and frontend interaction",
+                    "Set up hosting on WordPress and integrated with external services",
+                    "Created a responsive interface using modern CSS (Flexbox, Grid, media queries)"
                 ],
-                technologies: ["SPA", "REST API", "WordPress", "HTML/CSS", "JavaScript"],
-                link: "https://profi.copp78.ru/2025"
-            },
-            {
-                type: "project",
-                title: "AstroDiary — Astrological Diary",
-                subtitle: "Graduation Project",
-                date: "2025",
-                description: "Web application for astrological diary keeping and self-reflection",
-                details: [
-                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
-                    "Developed React frontend with TypeScript and client-side routing",
-                    "Created FastAPI backend with JWT authentication and CRUD operations",
-                    "Implemented astrological forecast system (planetary positions simulation)",
-                    "Designed PostgreSQL database with one-to-many relationships",
-                    "Integrated Framer Motion for smooth UI animations"
-                ],
-                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
-                link: "https://github.com/Saven0k/AstroDiary"
-            },
-            {
-                type: "project",
-                title: "CarMatch — Smart Car Matching",
-                subtitle: "Graduation Project",
-                date: "2026",
-                description: "Web application for car matching based on user's psycho-geometric profile",
-                details: [
-                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
-                    "Developed React frontend with TypeScript, responsive design, and Framer Motion animations",
-                    "Created FastAPI backend with JWT authentication, password hashing (bcrypt), and CRUD operations",
-                    "Implemented smart car matching logic based on 5 user answers (age, color, drink, lifestyle, clothing style)",
-                    "Designed and optimized PostgreSQL database with indexes for high performance"
-                ],
-                technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
-                link: "https://github.com/Saven0k/CarMatch"
-            },
-            {
-                type: "project",
-                title: "Digital Control — Industrial Video Analytics System",
-                subtitle: "Production Safety Monitoring Platform",
-                date: "June 2026",
-                description: "A modern web application for monitoring industrial safety using artificial intelligence technologies",
-                details: [
-                    "Developed a responsive single-page application using React 18, TypeScript, and Vite",
-                    "Implemented an interactive catalog of safety scenarios with filtering by work type (Drilling, Workover, Transport)",
-                    "Created an adaptive UI with smooth animations, categorized scenario display, and expandable detail cards",
-                    "Optimized image rendering for Retina displays with 2x resolution support and lazy loading",
-                    "Integrated smooth scroll behavior for better UX when expanding scenario details",
-                    "Configured project build and deployment pipeline to GitHub Pages"
-                ],
-                technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
-                link: "https://github.com/Saven0k/Digitalcontrol"
-            },
+                technologies: ["SPA", "REST API", "Django", "MySQL", "Python", "React", "WordPress", "HTML/CSS", "JavaScript"],
+                link: "https://profi.copp78.ru/2024"
+            }
         ]
     },
 
@@ -438,7 +503,7 @@ export const profile = {
                 ru: "Приложение для учета личных финансов с аналитикой",
                 en: "Personal finance tracking app with analytics"
             },
-            link: "#",
+            link: "https://github.com/Saven0k/finance-tracker",
             github: "https://github.com/Saven0k/finance-tracker",
             stack: ["React", "Redux Toolkit", "Node.js", "Express", "PostgreSQL"],
             image: "finance-tracker",

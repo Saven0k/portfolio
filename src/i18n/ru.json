@@ -5,11 +5,12 @@
         "experience": "Опыт",
         "achievements": "Достижения",
         "projects": "Проекты",
-        "contact": "Контакты"
+        "contact": "Обратная связь",
+        "contacts": "Контакты"
     },
     "hero": {
         "greeting": "Привет, я",
-        "role": "Frontend & Full Stack разработчик",
+        "role": "Full Stack разработчик",
         "view_work": "Проекты",
         "contact_me": "Связаться"
     },
@@ -29,10 +30,8 @@
         "title": "Контакты",
         "available": "Всегда открыт для новых возможностей!",
         "email": "Email",
-        "phone": "Телефон",
         "github": "GitHub",
-        "telegram": "Telegram",
-        "vkontakte": "ВКонтакте"
+        "telegram": "Telegram"
     },
     "experience": {
         "title": "Опыт и достижения",

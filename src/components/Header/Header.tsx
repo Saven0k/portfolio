@@ -14,7 +14,7 @@ const Header = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      const sections = ["hero", "about", "skills", "experience", "achievements", "projects", "contact"];
+      const sections = ["hero", "about", "skills", "experience", "achievements", "projects", "contact", "contacts"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -79,6 +79,12 @@ const Header = () => {
             className={activeSection === "experience" ? "active" : ""}
           >
             {t("nav.experience")}
+          </button>
+          <button
+            onClick={() => scrollToSection("contacts")}
+            className={activeSection === "contacts" ? "active" : ""}
+          >
+            {t("nav.contacts")}
           </button>
           <button
             onClick={() => scrollToSection("contact-form")}

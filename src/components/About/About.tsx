@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { profile } from "../../data/profile";
 import "./About.scss";
-import { EmailIcon, TelegramIcon, VKIcon } from "./icons";
+import { EmailIcon, GitHubIcon, TelegramIcon } from "./icons";
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -42,7 +42,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="info-grid">
+          <div className="info-grid" id="contacts">
             <div className="info-tile">
               <span className="info-number">{profile.age}</span>
               <span className="info-label">{lang === "ru" ? "лет" : "years"}</span>
@@ -95,13 +95,14 @@ const About = () => {
                     <div className="education-compact__item-meta">
                       <span className="education-compact__item-period">{edu.period[lang]}</span>
                       <span className="education-compact__item-status">{edu.status[lang]}</span>
+                      <span className="education-compact__item-status">{edu.speciality[lang]}</span>
                     </div>
                   </div>
                 </a>
               ))}
             </div>
           </div>
-          <div className="contacts-wrapper">
+          <div className="contacts-wrapper" >
             <h3 className="contacts-title">
               {lang === "ru" ? "Способы связи" : "Contact methods"}
             </h3>
@@ -118,7 +119,7 @@ const About = () => {
                   <span className="contact-icon">
                     {item.name === "Email" && <EmailIcon />}
                     {item.name === "Telegram" && <TelegramIcon />}
-                    {item.name === "VKontakte" && <VKIcon />}
+                    {item.name === "GitHub" && <GitHubIcon />}
                   </span>
                 </a>
               ))}
