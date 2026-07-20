@@ -53,34 +53,6 @@
 
 ---
 
-## 📁 Структура проекта
-src/
-├── components/ # React компоненты
-│ ├── About/ # Обо мне
-│ ├── Experience/ # Опыт и образование
-│ ├── Header/ # Шапка с навигацией
-│ ├── Footer/ # Подвал с информацией
-│ ├── Hero/ # Главный экран
-│ ├── LanguageToggle/ # Переключатель языка
-│ ├── Skills/ # hard Навыки с индикаторами
-│ └── ThemeToggle/ # Переключатель темы
-├── data/
-│ └── profile.ts # Все данные (тексты, ссылки, проценты)
-├── layouts/
-│ └── MainLayout.tsx # Основной layout
-├── store/
-│ └── useAppStore.ts # Zustand store
-├── styles/
-│ ├── global.scss # Глобальные стили
-│ └── variables.scss # CSS переменные
-├── i18n/
-│ ├── index.ts # Настройка i18n
-│ ├── ru.json # Русские переводы
-│ └── en.json # Английские переводы
-├── img/ # Изображения
-├── App.tsx
-└── main.tsx
-
 ## 🚀 Установка и запуск
 
 ### Требования

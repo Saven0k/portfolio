@@ -181,7 +181,7 @@ export const profile = {
             {
                 type: "project",
                 title: "Digital Control — Система видеоаналитики на производстве",
-                subtitle: "Платформа мониторинга промышленной безопасности",
+                subtitle: "Производственная практика в компании Газпром Нефть",
                 date: "Июнь 2026",
                 description: "Современное веб-приложение для мониторинга безопасности на производственных объектах с использованием технологий искусственного интеллекта",
                 details: [
@@ -338,7 +338,7 @@ export const profile = {
             {
                 type: "project",
                 title: "Digital Control — Industrial Video Analytics System",
-                subtitle: "Production Safety Monitoring Platform",
+                subtitle: "Industrial internship at Gazprom Neft",
                 date: "June 2026",
                 description: "A modern web application for monitoring industrial safety using artificial intelligence technologies",
                 details: [
@@ -574,3 +574,13 @@ export const profile = {
         },
     ]
 };
+
+// Проект: «База Знаний» (веб-приложение для колледжа)
+
+// Участвовал в полном цикле разработки - от проектирования интерфейса до реализации серверной логики.
+// Разрабатывал фронтенд-часть с использованием React, TypeScript, HTML/CSS, Redux-toolkit, React context.
+// Реализовывал бекенд-функциональность на Node.js,Express, TypeScript, MySql,Prisma.
+// Оптимизировал процессы взаимодействия между фронтендом и бекендом, что улучшило скорость работы приложения.
+
+
+// В похожем виде напиши про это 
