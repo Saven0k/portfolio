@@ -287,13 +287,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: none;
+  background: transparent;
   z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 20px;
+
+  &[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+  }
 }
 
 .skills__modal {
@@ -364,13 +377,6 @@
       opacity: 0.85;
     }
   }
-}
-
-.skills__achievement {
-  margin-bottom: 14px;
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--text-secondary);
 }
 
 .skills__card:focus-visible,
