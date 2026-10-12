@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form regression check</title>
+    <style>
+      #controls { padding: 16px; }
+      #controls button { padding: 8px 12px; margin: 8px 8px 8px 0; }
+      #status { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+      .contact-form { padding-top: 24px; }
+    </style>
+  </head>
+  <body>
+    <aside id="controls">
+      <p>Локальная проверка: заполните форму вручную, затем выберите ответ. Реальные запросы заблокированы.</p>
+      <button id="respond-success" disabled>Ответить успешно</button>
+      <button id="respond-error" disabled>Ответить с ошибкой</button>
+      <pre id="status" role="status" aria-live="polite"></pre>
+    </aside>
+    <main id="root"></main>
+    <script type="module">
+      const successButton = document.querySelector("#respond-success");
+      const errorButton = document.querySelector("#respond-error");
+      const status = document.querySelector("#status");
+      let requestCount = 0;
+      let pending = null;
+      let values = {};
+      let lastResult = "none";
+
+      function updateStatus() {
+        successButton.disabled = errorButton.disabled = pending === null;
+        status.textContent = `Requests: ${requestCount} | pending: ${pending !== null} | result: ${lastResult}\n${JSON.stringify(values, null, 2)}`;
+      }
+
+      window.fetch = (url, options = {}) => {
+        if (url !== "https://formspree.io/f/xzdondew" || options.method !== "POST" || !(options.body instanceof FormData) || pending) {
+          lastResult = "blocked unexpected fetch";
+          updateStatus();
+          return Promise.reject(new Error("Unexpected fetch blocked by contact-form fixture"));
+        }
+        requestCount += 1;
+        values = Object.fromEntries(options.body);
+        lastResult = "waiting";
+        return new Promise((resolve) => {
+          pending = { resolve };
+          updateStatus();
+        });
+      };
+
+      function respond(succeeded) {
+        if (!pending) return;
+        const { resolve } = pending;
+        pending = null;
+        lastResult = succeeded ? "success" : "error";
+        resolve(new Response(JSON.stringify(succeeded
+          ? { next: "https://formspree.io/thanks" }
+          : { errors: [{ code: "TYPE_EMAIL", field: "email", message: "Mock email error" }] }), {
+          status: succeeded ? 200 : 422,
+          headers: { "Content-Type": "application/json" },
+        }));
+        updateStatus();
+      }
+
+      successButton.addEventListener("click", () => respond(true));
+      errorButton.addEventListener("click", () => respond(false));
+      updateStatus();
+
+      const [{ default: React }, { createRoot }, { default: ContactForm }] = await Promise.all([
+        import("react"),
+        import("react-dom/client"),
+        import("../src/components/ContactForm/ContactForm.tsx"),
+        import("../src/i18n/index.ts"),
+        import("../src/styles/global.scss"),
+      ]);
+      createRoot(document.querySelector("#root")).render(React.createElement(ContactForm));
+    </script>
+  </body>
+</html>

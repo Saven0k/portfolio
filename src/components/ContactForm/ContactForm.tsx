@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect, useEffectEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm } from "@formspree/react";
 import "./ContactForm.scss";
@@ -8,34 +8,20 @@ const ContactForm = () => {
   const { i18n } = useTranslation();
   const lang = i18n.language as "ru" | "en";
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  
-  const [state, handleSubmit] = useForm('xzdondew');
+  const [state, handleSubmit, reset] = useForm('xzdondew');
+
+  const dismissResult = useEffectEvent(() => {
+    if (!state.submitting) reset();
+  });
 
   useEffect(() => {
-    if (state.succeeded) {
-      setStatus("success");
-      formRef.current?.reset(); 
-      setTimeout(() => {
-        setStatus("idle");
-      }, 3000);
-    }
-  }, [state.succeeded]);
+    if (state.submitting) return;
+    if (state.succeeded) formRef.current?.reset();
+    if (!state.succeeded && !state.errors) return;
 
-  useEffect(() => {
-    if (state.errors && Object.keys(state.errors).length > 0) {
-      setStatus("error");
-      setTimeout(() => {
-        setStatus("idle");
-      }, 3000);
-    }
-  }, [state.errors]);
-
-  useEffect(() => {
-    if (state.submitting) {
-      setStatus("loading");
-    }
-  }, [state.submitting]);
+    const timer = window.setTimeout(() => dismissResult(), 3000);
+    return () => window.clearTimeout(timer);
+  }, [state.submitting, state.succeeded, state.errors]);
 
   return (
     <motion.section
@@ -82,7 +68,7 @@ const ContactForm = () => {
               name="name"
               placeholder={lang === "ru" ? "Ваше имя" : "Your name"}
               required
-              disabled={status === "loading"}
+              disabled={state.submitting}
             />
           </div>
 
@@ -92,7 +78,7 @@ const ContactForm = () => {
               name="email"
               placeholder={lang === "ru" ? "Ваш Email" : "Your Email"}
               required
-              disabled={status === "loading"}
+              disabled={state.submitting}
             />
           </div>
 
@@ -102,23 +88,23 @@ const ContactForm = () => {
               rows={5}
               placeholder={lang === "ru" ? "Ваше сообщение..." : "Your message..."}
               required
-              disabled={status === "loading"}
+              disabled={state.submitting}
             />
           </div>
 
           <button 
             type="submit" 
             className="submit-btn"
-            disabled={status === "loading"}
+            disabled={state.submitting}
           >
-            {status === "loading" ? (
+            {state.submitting ? (
               <span className="loader"></span>
             ) : (
               lang === "ru" ? "📤 Отправить" : "📤 Send"
             )}
           </button>
 
-          {status === "success" && (
+          {!state.submitting && state.succeeded && (
             <motion.p
               className="success-message"
               initial={{ opacity: 0, y: 10 }}
@@ -130,7 +116,7 @@ const ContactForm = () => {
             </motion.p>
           )}
 
-          {status === "error" && (
+          {!state.submitting && state.errors !== null && (
             <motion.p
               className="error-message"
               initial={{ opacity: 0, y: 10 }}
