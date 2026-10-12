@@ -26,7 +26,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="about__badge">
-            <span className="badge-text">Full Stack Developer</span>
+            <span className="badge-text">{profile.position[lang]}</span>
           </div>
           <p className="about__intro">{profile.about[lang].intro}</p>
           <ul className="about__list">
@@ -34,6 +34,14 @@ const About = () => {
               <li key={idx}>{point}</li>
             ))}
           </ul>
+          <div className="about__soft-skills">
+            <h3>{t("softSkills.title")}</h3>
+            <ul className="about__list">
+              {profile.about[lang].softSkills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
           <div className="about__mentions">
             <h3 className="mentions-title">
               {lang === "ru" ? "📰 Упоминания в СМИ" : "📰 Mentions"}

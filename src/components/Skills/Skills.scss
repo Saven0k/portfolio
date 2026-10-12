@@ -365,3 +365,26 @@
     }
   }
 }
+
+.skills__achievement {
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.skills__card:focus-visible,
+.skills__info-close:focus-visible,
+.skills__modal-close:focus-visible {
+  outline: 2px solid #7c5cff;
+  outline-offset: 4px;
+}
+
+.skills__card {
+  height: 100%;
+}
+
+.skills__modal {
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+}

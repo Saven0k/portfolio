@@ -10,16 +10,16 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "role": "Full Stack Developer",
+    "focus": "React · TypeScript · Responsive interfaces and API integration",
     "view_work": "View Projects",
     "contact_me": "Contact Me"
   },
   "about": {
-    "title": "About Me",
-    "description": "Frontend developer with experience in the full cycle of web application development. Passionate about deep code analysis, performance optimization, and improving team workflows. Strive to create efficient and user-friendly interfaces, as well as participate in backend development."
+    "title": "About Me"
   },
   "skills": {
-    "title": "Technologies & Tools"
+    "title": "Frontend Skills",
+    "close": "Close skill description"
   },
   "experience": {
     "title": "Experience & Achievements",
@@ -57,7 +57,6 @@
     "title": "🏆 Achievements"
   },
   "softSkills": {
-    "title": "Soft Skills",
-    "subtitle": "Personal qualities that help in work and life"
+    "title": "How I work with a team"
   }
 }

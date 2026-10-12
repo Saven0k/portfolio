@@ -5,7 +5,7 @@ import { useForm } from "@formspree/react";
 import "./ContactForm.scss";
 
 const ContactForm = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language as "ru" | "en";
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");

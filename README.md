@@ -1,79 +1,39 @@
-# 💼 Роман Савенков | Full Stack Developer Portfolio
+# Роман Савенков — Frontend Developer
 
-<div align="center">
+Портфолио frontend-разработчика: React, TypeScript, адаптивные интерфейсы и интеграция с API.
 
-![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Zustand](https://img.shields.io/badge/Zustand-5.0-000000?style=for-the-badge)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+[Открыть портфолио](https://saven0k.github.io/portfolio/)
 
-**Современное портфолио-резюме с адаптивным дизайном, тёмной/светлой темой и полной локализацией**
+## Возможности
 
-[🌐 Демо](https://saven0k.github.io/portfolio) | [📧 Контакты](#контакты) | [📄 Резюме](#)
+- Русская и английская версии.
+- Светлая и тёмная темы.
+- Frontend-навыки с индикаторами уровня и короткими примерами достижений из проектов.
+- Дополнительный опыт backend-разработки в отдельной колонке.
+- Опыт, проекты и достижения, образование и контакты.
+- Краткое описание работы в команде в разделе «Обо мне».
+- Форма обратной связи через Formspree.
 
-</div>
+## Стек
 
----
+React 19, TypeScript 6, Vite 8, SCSS, Zustand, i18next, Framer Motion.
 
-## 📋 О проекте
+## Запуск и проверка
 
-Современное веб-портфолио, разработанное с использованием актуальных технологий. Включает полную информацию об опыте работы, образовании, навыках и проектах. Поддерживает русский и английский языки, а также тёмную и светлую темы.
-
-### ✨ Особенности
-
-| Функция | Описание |
-|---------|----------|
-| 🌍 **Двуязычность** | Полная поддержка русского и английского языков |
-| 🌓 **Темы** | Тёмная и светлая тема с сохранением выбора |
-| 📱 **Адаптивность** | Корректное отображение на всех устройствах |
-| 🎨 **Анимации** | Плавные появления и hover-эффекты с Framer Motion |
-| 📊 **Навыки** | Визуальные круговые индикаторы уровня владения |
-| 🎓 **Образование** | Карточки с учебными заведениями и ссылками |
-| 💼 **Опыт** | Таймлайн с ключевыми достижениями |
-| 🚀 **Проекты** | Карточки с технологиями и ссылками на код |
-
----
-
-## 🛠️ Технологии
-
-### Frontend
-- **React 18** — библиотека для UI
-- **TypeScript** — типизация
-- **Vite** — сборка и разработка
-- **SCSS Modules** — стилизация
-
-### State Management & Data
-- **Zustand** — управление состоянием (тема, язык)
-- **i18next** — интернационализация
-
-### UI & Animations
-- **Framer Motion** — анимации
-- **CSS Variables** — динамическая смена темы
-
----
-
-## 🚀 Установка и запуск
-
-### Требования
-- Node.js 18+
-- npm / yarn / pnpm
-
-### Команды
+Node.js 20.19+ или 22.12+ и npm.
 
 ```bash
-# Клонирование репозитория
-git clone https://github.com/Saven0k/portfolio.git
-cd portfolio`
-
-# Установка зависимостей
-npm install
-
-# Запуск dev-сервера
+npm ci
 npm run dev
-
-# Сборка продакшн версии
+npm run typecheck
+npm run lint
 npm run build
-
-# Предпросмотр собранного проекта
 npm run preview
+```
+
+Сборка включает проверку TypeScript. Публикация на GitHub Pages: `npm run deploy`.
+
+## Изменение контента
+
+Личные данные, навыки и опыт находятся в `src/data/profile.ts`, переводы интерфейса — в `src/i18n/ru.json` и `src/i18n/en.json`.
+Уровни навыков обозначают самооценку и не задают профессиональный грейд.

@@ -60,6 +60,8 @@ const Hero = () => {
                     {profile.position[lang]}
                 </motion.h2>
 
+                <p className="hero__focus">{t("hero.focus")}</p>
+
                 <motion.div
                     className="hero__buttons"
                     initial={{ opacity: 0, y: 30 }}
@@ -67,7 +69,7 @@ const Hero = () => {
                     transition={{ delay: 0.8 }}
                 >
                     <button 
-                        onClick={() => scrollToSection("projects")} 
+                        onClick={() => scrollToSection("experience")}
                         className="hero__btn-primary"
                         type="button"
                     >

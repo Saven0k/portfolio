@@ -21,8 +21,8 @@ export const profile = {
         en: "Russia"
     },
     position: {
-        ru: "Full Stack разработчик",
-        en: "Full Stack Developer"
+        ru: "Frontend-разработчик",
+        en: "Frontend Developer"
     },
     email: "romasav2017@gmail.com",
     github: "https://github.com/Saven0k",
@@ -37,23 +37,31 @@ export const profile = {
 
     about: {
         ru: {
-            intro: "Full Stack разработчик с опытом участия в полном цикле создания веб-приложений.",
+            intro: "Frontend-разработчик: создаю интерфейсы на React и TypeScript — от адаптивной вёрстки до работы с состоянием и API. Мне важно, чтобы приложение было понятным пользователю и удобным в поддержке.",
             points: [
-                "Разрабатываю проекты полного цикла — от идеи до продакшена",
-                "Принимаю архитектурные решения и проектирую масштабируемую архитектуру приложений",
-                "Оптимизирую производительность как клиентской, так и серверной части",
-                "Внедряю best practices, улучшаю командные процессы и провожу код-ревью",
-                "Участвую в стратегическом планировании технологического стека проекта"
+                "Разрабатываю компоненты, формы и клиентскую навигацию на React",
+                "Верстаю адаптивные интерфейсы с помощью HTML, CSS и SCSS",
+                "Подключаю API, управляю состоянием и обрабатываю загрузку и ошибки",
+                "Работаю над производительностью интерфейсов и провожу код-ревью"
+            ],
+            softSkills: [
+                "Обсуждаю требования и объясняю технические решения понятным языком",
+                "Открыт к обратной связи, участвую в код-ревью и помогаю команде",
+                "Довожу задачи до результата и заранее сообщаю о сложностях"
             ]
         },
         en: {
-            intro: "Full Stack developer with experience in the full cycle of web application development.",
+            intro: "Frontend developer building interfaces with React and TypeScript — from responsive layouts to state management and API integration. I care about making applications clear for users and easy to maintain.",
             points: [
-                "Develop full-cycle projects — from idea to production",
-                "Make architectural decisions and design scalable application architecture",
-                "Optimize performance of both client and server sides",
-                "Implement best practices, improve team processes and conduct code reviews",
-                "Participate in strategic planning of project technology stack"
+                "Build components, forms and client-side navigation with React",
+                "Create responsive interfaces with HTML, CSS and SCSS",
+                "Integrate APIs, manage state and handle loading and errors",
+                "Improve interface performance and review code"
+            ],
+            softSkills: [
+                "Discuss requirements and explain technical decisions clearly",
+                "Welcome feedback, take part in code reviews and help teammates",
+                "Follow tasks through to completion and communicate blockers early"
             ]
         }
     },
@@ -94,28 +102,25 @@ export const profile = {
 
     skills: {
         frontend: [
-            { name: "React", level: 85, description: { ru: "Создаю компонентные приложения с использованием хуков, контекста и React Router. Оптимизирую перерисовку и работаю с виртуальным DOM.", en: "I create component-based applications using hooks, context, and React Router. I optimize re-rendering and work with virtual DOM." } },
-            { name: "Next.js", level: 75, description: { ru: "Разрабатываю SSR и SSG приложения, работаю с App Router, API роутами и оптимизацией изображений.", en: "I develop SSR and SSG applications, work with App Router, API routes and image optimization." } },
-            { name: "TypeScript", level: 85, description: { ru: "Использую строгую типизацию, интерфейсы, дженерики и утилитарные типы. Повышаю надежность кода.", en: "I use strict typing, interfaces, generics and utility types. I increase code reliability." } },
-            { name: "Redux/Redux Toolkit/Zustand", level: 85, description: { ru: "Управляю глобальным состоянием, работаю с асинхронными действиями и middleware. Использую современные подходы.", en: "I manage global state, work with async actions and middleware. I use modern approaches." } },
-            { name: "HTML5/CSS3/SASS", level: 90, description: { ru: "Верстаю семантическую, адаптивную и кроссбраузерную верстку. Использую препроцессоры и CSS модули.", en: "I create semantic, responsive and cross-browser layouts. I use preprocessors and CSS modules." } },
-            { name: "Bootstrap/Material UI", level: 90, description: { ru: "Быстро создаю интерфейсы с использованием UI библиотек. Кастомизирую темы и компоненты.", en: "I quickly create interfaces using UI libraries. Customize themes and components." } },
-            { name: "Vite/Webpack", level: 90, description: { ru: "Настраиваю сборщики, оптимизирую бандл, работаю с плагинами и лоадерами.", en: "I configure bundlers, optimize bundles, work with plugins and loaders." } },
-            { name: "Framer Motion", level: 85, description: { ru: "Создаю плавные анимации и переходы, работаю с жестами и вариациями.", en: "I create smooth animations and transitions, work with gestures and variants." } },
-            { name: "React Query/TanStack Query", level: 75, description: { ru: "Управляю серверным состоянием, кэширую данные и оптимизирую запросы.", en: "I manage server state, cache data and optimize queries." } },
-            { name: "GraphQL/Apollo", level: 70, description: { ru: "Работаю с GraphQL API, пишу запросы и мутации, кэширую данные.", en: "I work with GraphQL API, write queries and mutations, cache data." } },
-            { name: "ESLint/Prettier", level: 80, description: { ru: "Настраиваю линтеры и форматтеры для поддержания чистоты кода и единого стиля.", en: "I configure linters and formatters to maintain code cleanliness and consistent style." } }
+            { name: "React", level: 85, description: { ru: "Создал фильтруемый каталог сценариев в Digital Control.", en: "Built a filterable scenario catalog in Digital Control." } },
+            { name: "TypeScript", level: 85, description: { ru: "Типизировал анкету и модели автомобилей в CarMatch.", en: "Typed the questionnaire and car models in CarMatch." } },
+            { name: "JavaScript", level: 85, description: { ru: "Реализовал поиск и редактирование пользователей в «Базе знаний».", en: "Implemented user search and editing in Knowledge Base." } },
+            { name: "HTML / CSS / SCSS", level: 90, description: { ru: "Сверстал адаптивное портфолио для смартфонов и компьютеров.", en: "Built responsive portfolio layouts for phones and desktops." } },
+            { name: "Redux Toolkit / Zustand", level: 85, description: { ru: "Настроил состояние темы и языка портфолио через Zustand.", en: "Managed portfolio theme and language state with Zustand." } },
+            { name: "REST API", level: 95, description: { ru: "Подключил авторизацию и записи AstroDiary к REST API.", en: "Connected AstroDiary authentication and diary entries to a REST API." } },
+            { name: "Framer Motion", level: 85, description: { ru: "Добавил анимации секций и карточек в портфолио.", en: "Animated portfolio sections and cards with Framer Motion." } },
+            { name: "Vite", level: 90, description: { ru: "Настроил сборку Digital Control для публикации на GitHub Pages.", en: "Configured the Digital Control build for GitHub Pages." } },
+            { name: "Material UI", level: 90, description: { ru: "Подготовил поля ввода на Material UI для «Базы знаний».", en: "Created Material UI input fields for Knowledge Base." } },
+            { name: "Git / GitHub", level: 90, description: { ru: "Организовал версионирование и публикацию портфолио в GitHub.", en: "Set up portfolio version control and publishing on GitHub." } },
+            { name: "ESLint", level: 80, description: { ru: "Настроил проверку React и TypeScript в Digital Control через ESLint.", en: "Configured ESLint checks for React and TypeScript in Digital Control." } }
         ],
         backend: [
-            { name: "Express.js", level: 95, description: { ru: "Создаю REST API, middleware, обрабатываю маршруты и ошибки. Строю масштабируемые серверные приложения.", en: "I create REST APIs, middleware, handle routes and errors. Build scalable server applications." } },
-            { name: "Nest.js", level: 75, description: { ru: "Использую модульную архитектуру, внедрение зависимостей и декораторы.", en: "I use modular architecture, dependency injection and decorators." } },
-            { name: "Django/DRF", level: 75, description: { ru: "Разрабатываю бэкенд на Python, использую ORM, админ-панель и DRF.", en: "I develop backend in Python, use ORM, admin panel and DRF." } },
-            { name: "FastAPI", level: 70, description: { ru: "Создаю быстрые API с автодокументацией и валидацией данных.", en: "I create fast APIs with auto-documentation and data validation." } },
-            { name: "MySQL/PostgreSQL", level: 80, description: { ru: "Работаю с реляционными и NoSQL базами данных, пишу сложные запросы, проектирую схемы.", en: "I work with relational and NoSQL databases, write complex queries, design schemas." } },
-            { name: "Prisma/TypeORM", level: 85, description: { ru: "Использую ORM для работы с БД, пишу модели, миграции и запросы.", en: "I use ORM for database work, write models, migrations and queries." } },
-            { name: "Docker", level: 75, description: { ru: "Контейнеризирую приложения, пишу Dockerfile и docker-compose.", en: "I containerize applications, write Dockerfile and docker-compose." } },
-            { name: "REST API", level: 95, description: { ru: "Проектирую и документирую RESTful API, работаю с HTTP методами и статусами.", en: "I design and document RESTful APIs, work with HTTP methods and statuses." } },
-            { name: "Git/GitHub/GitLab", level: 90, description: { ru: "Работаю с системами контроля версий, веду код-ревью и управляю ветками.", en: "I work with version control systems, conduct code reviews and manage branches." } }
+            { name: "Express.js", level: 95, description: { ru: "Разработал API статей и пользователей для «Базы знаний».", en: "Built the articles and users API for Knowledge Base." } },
+            { name: "Nest.js", level: 75, description: { ru: "Реализовал роли пользователей и модерацию контента в Gallery.", en: "Implemented user roles and content moderation in Gallery." } },
+            { name: "Django / DRF", level: 75, description: { ru: "Создал REST API с ролями для чемпионата «Профессионалы».", en: "Built a role-based REST API for the Professionals championship." } },
+            { name: "FastAPI", level: 70, description: { ru: "Реализовал авторизацию и подбор автомобилей в CarMatch.", en: "Implemented authentication and car matching in CarMatch." } },
+            { name: "MySQL / PostgreSQL", level: 80, description: { ru: "Спроектировал хранение пользователей и записей в AstroDiary.", en: "Designed user and diary entry storage in AstroDiary." } },
+            { name: "Docker", level: 75, description: { ru: "Настроил запуск Gallery через Docker Compose.", en: "Configured Gallery startup with Docker Compose." } }
         ]
     },
 
@@ -581,6 +586,3 @@ export const profile = {
 // Разрабатывал фронтенд-часть с использованием React, TypeScript, HTML/CSS, Redux-toolkit, React context.
 // Реализовывал бекенд-функциональность на Node.js,Express, TypeScript, MySql,Prisma.
 // Оптимизировал процессы взаимодействия между фронтендом и бекендом, что улучшило скорость работы приложения.
-
-
-// В похожем виде напиши про это 

@@ -124,6 +124,17 @@
       }
     }
   }
+
+  &__focus {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+
+    @media (max-width: 768px) {
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -308,7 +319,8 @@
 [data-theme="light"] {
   .hero {
     &__subtitle, 
-    &__role {
+    &__role,
+    &__focus {
       color: var(--text-primary);
     }
     
