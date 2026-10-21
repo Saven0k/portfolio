@@ -15,7 +15,7 @@ const Experience = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const timeline = profile.unifiedTimeline[lang];
-  const totalProjects = timeline.length;
+  const totalProjects = timeline.filter(item => item.type === "project").length;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -81,12 +81,16 @@ const Experience = () => {
         </div>
         <div className="details-title-row">
           <h3>{item.title}</h3>
-          <div className="details-link-icon" onClick={(e) => {
-            e.stopPropagation();
-            if (item.link) window.open(item.link, "_blank");
-          }}>
+          <a
+            className="details-link-icon"
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={lang === "ru" ? "Открыть источник проекта или достижения" : "Open project or achievement source"}
+            onClick={(e) => e.stopPropagation()}
+          >
             <LinkIcon />
-          </div>
+          </a>
         </div>
         <h4>{item.subtitle}</h4>
         <span className="details-date">{item.date}</span>
@@ -94,6 +98,17 @@ const Experience = () => {
 
       <div className="details-description">
         <p>{item.description}</p>
+        {item.demo && (
+          <a
+            className="details-demo"
+            href={item.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {t("projects.demo")} ↗
+          </a>
+        )}
       </div>
 
       <div className="details-list">

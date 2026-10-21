@@ -185,17 +185,32 @@ export const profile = {
         ru: [
             {
                 type: "project",
+                title: "Maria Portfolio — Портфолио журналиста",
+                subtitle: "Разработка интерфейса, API и публикация",
+                date: "Октябрь 2026",
+                description: "Портфолио журналиста с серверным рендерингом, архивом публикаций и ежедневным обновлением материалов «Коммерсанта».",
+                details: [
+                    "Разработал адаптивный интерфейс на React и TypeScript: 4 раздела и 2 языка — русский и английский",
+                    "Объединил публикации 3 изданий в каталог с фильтрацией и порционной загрузкой по 6 карточек",
+                    "Настроил ежедневный сбор материалов и обновление архива в интерфейсе каждые 60 секунд; SQLite сохраняет публикации при сбое источника",
+                    "Реализовал SSR с актуальными публикациями, метаданными Open Graph, разметкой Schema.org и sitemap для поисковой индексации",
+                    "Объединил frontend и NestJS API в 1 Docker-контейнер; настроил проверки сборки, ESLint и тестов в GitHub Actions"
+                ],
+                technologies: ["React", "TypeScript", "SCSS", "Framer Motion", "SSR", "NestJS", "SQLite", "Docker", "GitHub Actions"],
+                link: "https://github.com/Saven0k/maria-portfolio",
+                demo: "https://maria.178-64-25-131.sslip.io/"
+            },
+            {
+                type: "project",
                 title: "Digital Control — Система видеоаналитики на производстве",
                 subtitle: "Производственная практика в компании Газпром Нефть",
                 date: "Июнь 2026",
-                description: "Современное веб-приложение для мониторинга безопасности на производственных объектах с использованием технологий искусственного интеллекта",
+                description: "Интерактивный каталог сценариев видеоаналитики для контроля промышленной безопасности.",
                 details: [
-                    "Разработал адаптивное одностраничное приложение на React 18, TypeScript и Vite",
-                    "Реализовал интерактивный каталог сценариев безопасности с фильтрацией по типам работ (Бурение, ТКРС, Транспорт)",
-                    "Создал адаптивный UI с плавными анимациями, категоризированным отображением сценариев и раскрывающимися карточками с деталями",
-                    "Оптимизировал отображение изображений для Retina-экранов с поддержкой разрешения 2x и отложенной загрузкой",
-                    "Интегрировал плавный скролл для улучшения UX при раскрытии деталей сценария",
-                    "Настроил сборку проекта и пайплайн деплоя на GitHub Pages"
+                    "Разработал каталог 32 сценариев безопасности в 2 направлениях: 18 для бурения и 14 для ТКРС",
+                    "Реализовал 3 режима фильтрации со счётчиком результатов и раскрывающимися карточками, доступными с клавиатуры",
+                    "Настроил отложенную загрузку изображений и загрузку содержимого карточки при раскрытии",
+                    "Подготовил адаптивный интерфейс на React и TypeScript и публикацию через GitHub Pages"
                 ],
                 technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
                 link: "https://github.com/Saven0k/Digitalcontrol"
@@ -205,13 +220,12 @@ export const profile = {
                 title: "CarMatch — Умный подбор автомобиля",
                 subtitle: "Дипломный проект",
                 date: "Июнь 2026",
-                description: "Веб-приложение для подбора автомобиля на основе психо-геометрического профиля пользователя",
+                description: "Сервис подбора автомобилей с анкетой предпочтений, ранжированием вариантов и объяснением рекомендаций.",
                 details: [
-                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
-                    "Разработал фронтенд на React с TypeScript, адаптивным дизайном и анимациями Framer Motion",
-                    "Создал бэкенд на FastAPI с JWT-аутентификацией, хэшированием паролей (bcrypt) и CRUD операциями",
-                    "Реализовал умную логику подбора автомобиля на основе 5 пользовательских ответов (возраст, цвет, напиток, ритм жизни, стиль одежды)",
-                    "Спроектировал и оптимизировал базу данных PostgreSQL с индексами для высокой производительности"
+                    "Разработал 5 экранов на React и TypeScript: главную, регистрацию, вход, анкету и результаты подбора",
+                    "Связал анкету из 4 параметров с API, которое ранжирует автомобили и возвращает до 3 рекомендаций с объяснением выбора",
+                    "Спроектировал 3 уровня приложения: React-интерфейс, FastAPI и базу PostgreSQL",
+                    "Реализовал серверную JWT-аутентификацию и адаптивный интерфейс с анимациями Framer Motion"
                 ],
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
                 link: "https://github.com/Saven0k/CarMatch"
@@ -223,12 +237,10 @@ export const profile = {
                 date: "Июнь 2026",
                 description: "Веб-приложение для ведения астрологического дневника и самоанализа",
                 details: [
-                    "Спроектировал трёхуровневую клиент-серверную архитектуру (React + FastAPI + PostgreSQL)",
-                    "Разработал фронтенд на React с TypeScript и клиентской маршрутизацией",
-                    "Создал бэкенд на FastAPI с JWT-аутентификацией и CRUD операциями",
-                    "Реализовал систему астрологических прогнозов (симуляция положения планет)",
-                    "Разработал базу данных PostgreSQL с отношением один-ко-многим",
-                    "Интегрировал Framer Motion для плавных анимаций интерфейса"
+                    "Разработал 5 экранов на React и TypeScript с проверкой авторизации для 3 разделов: кабинета, прогноза и дневника",
+                    "Реализовал дневник с 5 вариантами настроения, сохранением через REST API и историей записей",
+                    "Создал 6 серверных операций дневника: создание, список, чтение, обновление, удаление и выборку за период",
+                    "Добавил демонстрационные астрологические прогнозы с симуляцией положения планет и анимации Framer Motion"
                 ],
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
                 link: "https://github.com/Saven0k/AstroDiary"
@@ -252,17 +264,15 @@ export const profile = {
                 title: "Gallery - Платформа для художников",
                 subtitle: "Персональный проект",
                 date: "Январь 2026 — Июнь 2026",
-                description: "Создал полноценную галерею для художников с функционалом публикации, модерации и социального взаимодействия",
+                description: "Платформа для публикации работ художников с личными кабинетами, модерацией и многоязычным интерфейсом.",
                 details: [
-                    "Разработал архитектуру приложения на NestJS (бэкенд) и React (фронтенд)",
-                    "Реализовал систему модерации контента с разграничением ролей (админ, модератор, художник, пользователь)",
-                    "Интегрировал автоматический перевод контента на 5 языков через LibreTranslate API",
-                    "Создал систему лайков и избранного с хранением в localStorage",
-                    "Реализовал чат поддержки в реальном времени",
-                    "Настроил Docker Compose для развертывания проекта"
+                    "Реализовал интерфейс галереи на 3 языках: русском, английском и китайском",
+                    "Разделил 11 экранов на лениво загружаемые React-модули",
+                    "Разграничил доступ к профилю, публикации работ и админ-панели для 4 ролей в интерфейсе",
+                    "Связал React-интерфейс с NestJS API и настроил развёртывание через Docker Compose"
                 ],
                 technologies: ["React", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Redis", "Docker", "WebSocket"],
-                link: "https://github.com/Saven0k/Gallery"
+                link: "https://github.com/Saven0k/ArtGallary"
             },
             {
                 type: "achievement",
@@ -286,37 +296,36 @@ export const profile = {
                 date: "Январь 2025",
                 description: "Современное портфолио с адаптивным дизайном и полной локализацией",
                 details: [
-                    "Разработал полностью адаптивный интерфейс с поддержкой мобильных устройств",
-                    "Реализовал тёмную и светлую тему с сохранением выбора в localStorage",
-                    "Добавил полную локализацию на русский и английский языки",
-                    "Создал интерактивную секцию навыков с модальными окнами",
-                    "Интегрировал анимации с использованием Framer Motion"
+                    "Реализовал локализацию на 2 языках и переключение между 2 темами с сохранением настроек",
+                    "Создал 17 интерактивных карточек навыков в 2 категориях с описаниями в модальных окнах",
+                    "Подключил форму Formspree с обработкой загрузки, ошибок и повторных отправок без потери черновика при ошибке",
+                    "Адаптировал интерфейс для смартфонов и компьютеров, добавил анимации Framer Motion и публикацию на GitHub Pages"
                 ],
                 technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
                 link: "https://github.com/Saven0k/portfolio"
             },
             {
                 type: "project",
-                title: "Full Stack разработчик",
+                title: "База знаний — Платформа для колледжа",
                 subtitle: "Хекслет колледж",
                 date: "Март 2025 — Декабрь 2025",
-                description: "Участвовал в полном цикле разработки веб-приложения для колледжа",
+                description: "База знаний колледжа: поиск учебных материалов, редактор публикаций и управление доступом.",
                 details: [
-                    "Разрабатывал фронтенд-часть с использованием React, TypeScript, Redux-toolkit",
-                    "Реализовал бекенд-функциональность на Node.js, Express, TypeScript, Prisma",
-                    "Оптимизировал процессы взаимодействия между фронтендом и бекендом"
+                    "Разработал интерфейсы и разграничение доступа для 4 ролей: студента, преподавателя, редактора и администратора",
+                    "Создал библиотеку с 4 категориями материалов, поиском и 2 режимами отображения: плиткой и списком",
+                    "Реализовал редактор с 3 статусами публикации, автосохранением черновиков и восстановлением версий"
                 ],
-                technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
+                technologies: ["React", "TypeScript", "Zustand", "TanStack Query", "Quill", "Vite", "Express", "SQLite"],
                 link: "https://github.com/Saven0k/BaseKnowledge"
             },
             {
                 type: "project",
-                title: "Frontend разработчик",
+                title: "Финансовый трекер — Frontend-разработка",
                 subtitle: "Финансовый учет",
                 date: "Апрель 2025 — Октябрь 2025",
                 description: "Разработка коммерческого веб-приложения для учета финансов",
                 details: [
-                    "Принимал активное участие в командной разработке коммерческого веб-приложения",
+                    "Участвовал в разработке финансового трекера с 3 возможностями: аналитикой, экспортом данных и категориями расходов",
                     "Координировал работу команды: распределял задачи, проводил код-ревью",
                     "Решал нестандартные задачи и отладку сложных технических проблем"
                 ],
@@ -342,17 +351,32 @@ export const profile = {
         en: [
             {
                 type: "project",
+                title: "Maria Portfolio — Journalist Portfolio",
+                subtitle: "Interface, API and deployment",
+                date: "October 2026",
+                description: "A journalist portfolio with server-side rendering, a publication archive and daily updates from Kommersant.",
+                details: [
+                    "Built a responsive React and TypeScript interface with 4 sections and 2 languages: Russian and English",
+                    "Unified publications from 3 outlets in a filterable catalog with progressive loading in batches of 6 cards",
+                    "Set up daily article collection and archive refreshes every 60 seconds in the UI; SQLite retains publications during source outages",
+                    "Implemented SSR with current publications, Open Graph metadata, Schema.org markup and a sitemap for search indexing",
+                    "Packaged the frontend and NestJS API in 1 Docker container, with build, ESLint and test checks in GitHub Actions"
+                ],
+                technologies: ["React", "TypeScript", "SCSS", "Framer Motion", "SSR", "NestJS", "SQLite", "Docker", "GitHub Actions"],
+                link: "https://github.com/Saven0k/maria-portfolio",
+                demo: "https://maria.178-64-25-131.sslip.io/"
+            },
+            {
+                type: "project",
                 title: "Digital Control — Industrial Video Analytics System",
                 subtitle: "Industrial internship at Gazprom Neft",
                 date: "June 2026",
-                description: "A modern web application for monitoring industrial safety using artificial intelligence technologies",
+                description: "An interactive catalog of video analytics scenarios for industrial safety monitoring.",
                 details: [
-                    "Developed a responsive single-page application using React 18, TypeScript, and Vite",
-                    "Implemented an interactive catalog of safety scenarios with filtering by work type (Drilling, Workover, Transport)",
-                    "Created an adaptive UI with smooth animations, categorized scenario display, and expandable detail cards",
-                    "Optimized image rendering for Retina displays with 2x resolution support and lazy loading",
-                    "Integrated smooth scroll behavior for better UX when expanding scenario details",
-                    "Configured project build and deployment pipeline to GitHub Pages"
+                    "Built a catalog of 32 safety scenarios across 2 work areas: 18 for drilling and 14 for well servicing",
+                    "Implemented 3 filtering modes with result counts and keyboard-accessible expandable scenario cards",
+                    "Set up lazy image loading and deferred card content loading until expansion",
+                    "Built a responsive React and TypeScript interface and configured GitHub Pages publishing"
                 ],
                 technologies: ["React", "TypeScript", "Vite", "CSS", "Git", "GitHub Pages"],
                 link: "https://github.com/Saven0k/Digitalcontrol"
@@ -362,13 +386,12 @@ export const profile = {
                 title: "CarMatch — Smart Car Matching",
                 subtitle: "Graduation Project",
                 date: "June 2026",
-                description: "Web application for car matching based on user's psycho-geometric profile",
+                description: "A car matching service with a preference questionnaire, ranked results and explanations for each recommendation.",
                 details: [
-                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
-                    "Developed React frontend with TypeScript, responsive design, and Framer Motion animations",
-                    "Created FastAPI backend with JWT authentication, password hashing (bcrypt), and CRUD operations",
-                    "Implemented smart car matching logic based on 5 user answers (age, color, drink, lifestyle, clothing style)",
-                    "Designed and optimized PostgreSQL database with indexes for high performance"
+                    "Built 5 React and TypeScript screens: landing page, registration, login, questionnaire and matching results",
+                    "Connected a 4-parameter questionnaire to an API that ranks cars and returns up to 3 recommendations with selection reasons",
+                    "Designed 3 application layers: a React interface, FastAPI and a PostgreSQL database",
+                    "Implemented server-side JWT authentication and a responsive interface with Framer Motion animations"
                 ],
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "bcrypt", "Docker", "Framer Motion", "Vite", "Axios"],
                 link: "https://github.com/Saven0k/CarMatch"
@@ -380,12 +403,10 @@ export const profile = {
                 date: "June 2026",
                 description: "Web application for astrological diary keeping and self-reflection",
                 details: [
-                    "Designed three-tier client-server architecture (React + FastAPI + PostgreSQL)",
-                    "Developed React frontend with TypeScript and client-side routing",
-                    "Created FastAPI backend with JWT authentication and CRUD operations",
-                    "Implemented astrological forecast system (planetary positions simulation)",
-                    "Designed PostgreSQL database with one-to-many relationships",
-                    "Integrated Framer Motion for smooth UI animations"
+                    "Built 5 React and TypeScript screens with authentication checks for 3 sections: dashboard, horoscope and diary",
+                    "Implemented a diary with 5 mood options, REST API persistence and an entry history",
+                    "Built 6 server-side diary operations: create, list, read, update, delete and date-range queries",
+                    "Added demo horoscopes with simulated planetary positions and Framer Motion animations"
                 ],
                 technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "Vite", "Axios", "Framer Motion"],
                 link: "https://github.com/Saven0k/AstroDiary"
@@ -410,14 +431,12 @@ export const profile = {
                 title: "Gallery - Art Platform",
                 subtitle: "Personal Project",
                 date: "January 2026 — June 2026",
-                description: "Built a full-featured gallery for artists with publishing, moderation, and social interaction functionality",
+                description: "An artwork publishing platform with personal accounts, moderation and a multilingual interface.",
                 details: [
-                    "Designed application architecture with NestJS (backend) and React (frontend)",
-                    "Implemented content moderation system with role-based access (admin, moderator, artist, user)",
-                    "Integrated automatic content translation into 5 languages via LibreTranslate API",
-                    "Created likes and favorites system with localStorage storage",
-                    "Developed real-time support chat",
-                    "Set up Docker Compose for project deployment"
+                    "Implemented the gallery interface in 3 languages: Russian, English and Chinese",
+                    "Split 11 screens into lazy-loaded React modules",
+                    "Implemented access rules for profile, artwork publishing and administration across 4 UI roles",
+                    "Connected the React interface to a NestJS API and configured deployment with Docker Compose"
                 ],
                 technologies: ["React", "TypeScript", "NestJS", "Sequelize", "PostgreSQL", "Redis", "Docker", "WebSocket"],
                 link: "https://github.com/Saven0k/ArtGallary"
@@ -444,37 +463,36 @@ export const profile = {
                 date: "January 2025",
                 description: "Modern portfolio with responsive design and full localization",
                 details: [
-                    "Developed fully responsive interface with mobile device support",
-                    "Implemented dark/light theme with localStorage persistence",
-                    "Added full Russian/English localization",
-                    "Created interactive skills section with modal windows",
-                    "Integrated animations using Framer Motion"
+                    "Implemented localization in 2 languages and switching between 2 themes with saved preferences",
+                    "Built 17 interactive skill cards across 2 categories with descriptions in modal dialogs",
+                    "Integrated Formspree with loading, error and retry handling that preserves the draft after a failed submission",
+                    "Adapted the interface for phones and desktops, added Framer Motion animations and GitHub Pages publishing"
                 ],
                 technologies: ["React", "TypeScript", "Vite", "Zustand", "Framer Motion", "i18next", "SCSS"],
                 link: "https://github.com/Saven0k/portfolio"
             },
             {
                 type: "project",
-                title: "Full Stack Developer",
+                title: "Knowledge Base — College Platform",
                 subtitle: "Hexlet College",
                 date: "March 2025 — December 2025",
-                description: "Participated in the full cycle of web application development for college",
+                description: "A college knowledge base with learning material search, a publishing editor and access management.",
                 details: [
-                    "Developed frontend using React, TypeScript, Redux-toolkit",
-                    "Implemented backend functionality with Node.js, Express, TypeScript, Prisma",
-                    "Optimized frontend-backend interaction processes"
+                    "Built interfaces and access rules for 4 roles: student, teacher, editor and administrator",
+                    "Built a searchable library with 4 content categories and 2 layouts: grid and list",
+                    "Implemented an editor with 3 publishing states, draft autosave and revision restoration"
                 ],
-                technologies: ["React", "TypeScript", "Node.js", "Express", "Prisma", "MySQL"],
+                technologies: ["React", "TypeScript", "Zustand", "TanStack Query", "Quill", "Vite", "Express", "SQLite"],
                 link: "https://github.com/Saven0k/BaseKnowledge"
             },
             {
                 type: "project",
-                title: "Frontend Developer",
+                title: "Finance Tracker — Frontend Development",
                 subtitle: "Finance Tracker",
                 date: "April 2025 — October 2025",
                 description: "Development of a commercial web application for financial accounting",
                 details: [
-                    "Actively participated in the team development of a commercial web application",
+                    "Contributed to a finance tracker with 3 capabilities: analytics, data export and expense categories",
                     "Coordinated team work: task distribution, code reviews",
                     "Solved non-standard tasks and debugged complex technical issues"
                 ],
