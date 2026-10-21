@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { profile } from "../../data/profile";
+import { getAge } from "../../data/age";
 import "./About.scss";
 import { EmailIcon, GitHubIcon, TelegramIcon } from "./icons";
 
@@ -78,7 +79,7 @@ const About = () => {
         >
           <div className="info-grid" id="contacts">
             <div className="info-tile">
-              <span className="info-number">{profile.age}</span>
+              <span className="info-number">{getAge(profile.birthDate)}</span>
               <span className="info-label">{lang === "ru" ? "лет" : "years"}</span>
             </div>
             <div className="info-tile">

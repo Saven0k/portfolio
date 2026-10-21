@@ -7,7 +7,7 @@ export const profile = {
         ru: "Савенков",
         en: "Savenkov"
     },
-    age: 18,
+    birthDate: "2007-10-12",
     location: {
         ru: "Санкт-Петербург, Россия",
         en: "Saint Petersburg, Russia"
