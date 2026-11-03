@@ -198,7 +198,7 @@ export const profile = {
                 ],
                 technologies: ["React", "TypeScript", "SCSS", "Framer Motion", "SSR", "NestJS", "SQLite", "Docker", "GitHub Actions"],
                 link: "https://github.com/Saven0k/maria-portfolio",
-                demo: "https://maria.178-64-25-131.sslip.io/"
+                website: "https://mariaodnosteblets.ru/"
             },
             {
                 type: "project",
@@ -364,7 +364,7 @@ export const profile = {
                 ],
                 technologies: ["React", "TypeScript", "SCSS", "Framer Motion", "SSR", "NestJS", "SQLite", "Docker", "GitHub Actions"],
                 link: "https://github.com/Saven0k/maria-portfolio",
-                demo: "https://maria.178-64-25-131.sslip.io/"
+                website: "https://mariaodnosteblets.ru/"
             },
             {
                 type: "project",

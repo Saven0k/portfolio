@@ -1,5 +1,5 @@
-import { motion, useInView } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { profile } from "../../data/profile";
 import LinkIcon from "./LinkIcon";
@@ -8,8 +8,6 @@ import "./Experience.scss";
 const Experience = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language as "ru" | "en";
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const [selectedItem, setSelectedItem] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -80,7 +78,7 @@ const Experience = () => {
           {getTypeLabel(item.type)}
         </div>
         <div className="details-title-row">
-          <h3>{item.title}</h3>
+          <h3 id="experience-project-title">{item.title}</h3>
           <a
             className="details-link-icon"
             href={item.link}
@@ -98,15 +96,15 @@ const Experience = () => {
 
       <div className="details-description">
         <p>{item.description}</p>
-        {item.demo && (
+        {item.website && (
           <a
-            className="details-demo"
-            href={item.demo}
+            className="details-website"
+            href={item.website}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
           >
-            {t("projects.demo")} ↗
+            {t("projects.website")} ↗
           </a>
         )}
       </div>
@@ -137,10 +135,11 @@ const Experience = () => {
   );
 
   return (
-    <section id="experience" className="experience" ref={ref}>
+    <section id="experience" className="experience">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
         {t("experience.title")}
@@ -158,12 +157,15 @@ const Experience = () => {
           
           <div className="timeline-line"></div>
           {timeline.map((item, idx) => (
-            <motion.div
+            <motion.button
               key={idx}
+              type="button"
               className={`timeline-item ${selectedItem === idx && !isMobile ? "active" : ""}`}
-              initial={{ opacity: 0, x: -30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              aria-haspopup={isMobile ? "dialog" : undefined}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.12 }}
+              transition={{ duration: 0.35 }}
               onClick={() => handleItemClick(idx)}
             >
               <div className="timeline-dot"></div>
@@ -175,7 +177,7 @@ const Experience = () => {
                 <p>{item.subtitle}</p>
                 <span className="timeline-date">{item.date}</span>
               </div>
-            </motion.div>
+            </motion.button>
           ))}
         </div>
         {!isMobile && (
@@ -195,12 +197,20 @@ const Experience = () => {
         <div className="experience__modal-overlay" onClick={closeModal}>
           <motion.div
             className="experience__modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="experience-project-title"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <button className="experience__modal-close" onClick={closeModal}>
+            <button
+              type="button"
+              className="experience__modal-close"
+              aria-label={lang === "ru" ? "Закрыть описание проекта" : "Close project details"}
+              onClick={closeModal}
+            >
               ✕
             </button>
             <div className="experience__modal-content">
