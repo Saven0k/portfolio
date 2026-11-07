@@ -1,6 +1,6 @@
 # Роман Савенков — Frontend Developer
 
-Портфолио frontend-разработчика: React, TypeScript, адаптивные интерфейсы и интеграция с API.
+Портфолио frontend-разработчика с опытом 3+ года. React, TypeScript, адаптивные интерфейсы и интеграция с API.
 
 [Открыть портфолио](https://saven0k.github.io/portfolio/)
 

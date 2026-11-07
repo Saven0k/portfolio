@@ -60,7 +60,7 @@ const Hero = () => {
                     {profile.position[lang]}
                 </motion.h2>
 
-                <p className="hero__focus">{t("hero.focus")}</p>
+                <p className="hero__focus">{t("hero.focus", { years: profile.experienceYears })}</p>
 
                 <motion.div
                     className="hero__buttons"

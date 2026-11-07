@@ -92,7 +92,7 @@ const About = () => {
             </div>
             <div className="info-tile">
               <span className="info-number">{profile.experienceYears}+</span>
-              <span className="info-label">{lang === "ru" ? "года опыта" : "experience"}</span>
+              <span className="info-label">{lang === "ru" ? "года опыта" : "years of experience"}</span>
             </div>
             <div className="info-tile">
               <span className="info-number">{lang === "ru" ? "Русский" : "Russian"}</span>

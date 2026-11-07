@@ -10,7 +10,7 @@
     },
     "hero": {
         "greeting": "Привет, я",
-        "focus": "React · TypeScript · Адаптивные интерфейсы и работа с API",
+        "focus": "{{years}}+ года опыта · React · TypeScript · Адаптивные интерфейсы и работа с API",
         "view_work": "Проекты",
         "contact_me": "Связаться"
     },

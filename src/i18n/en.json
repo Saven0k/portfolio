@@ -10,7 +10,7 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "focus": "React · TypeScript · Responsive interfaces and API integration",
+    "focus": "{{years}}+ years of experience · React · TypeScript · Responsive interfaces and API integration",
     "view_work": "View Projects",
     "contact_me": "Contact Me"
   },
