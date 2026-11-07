@@ -27,7 +27,7 @@ export const profile = {
     email: "romasav2017@gmail.com",
     github: "https://github.com/Saven0k",
     telegram: "@owl11112",
-    experienceYears: 2,
+    experienceYears: 3,
 
     contacts: [
         { name: "Email", link: "mailto:romasav2017@gmail.com" },
